@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 px-6 relative overflow-hidden">
+    <footer className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-12 px-6 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -44,10 +44,7 @@ export default function Footer() {
             >
               AliyevDev
             </motion.div>
-            <p className="text-slate-300 leading-relaxed">
-              Transforming ideas into exceptional digital experiences through innovative design and cutting-edge
-              development.
-            </p>
+       
           </motion.div>
 
           <motion.div
@@ -85,9 +82,9 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
               {[
-                { icon: Github, href: "#", color: "hover:bg-gray-700" },
-                { icon: Linkedin, href: "#", color: "hover:bg-blue-600" },
-                { icon: Instagram, href: "#", color: "hover:bg-pink-600" },
+                { icon: Github, href: "https://github.com/IbrahimAliyev20", color: "hover:bg-gray-700" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/ibrahim-aliyev-668283307/", color: "hover:bg-blue-600" },
+                { icon: Instagram, href: "https://www.instagram.com/iboaliyev020/", color: "hover:bg-pink-600"},
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -95,6 +92,7 @@ export default function Footer() {
                   className={`w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center text-slate-300 hover:text-white ${social.color} transition-all duration-300`}
                   whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}
+                  target="_blank"
                 >
                   <social.icon className="h-5 w-5" />
                 </motion.a>
@@ -111,12 +109,12 @@ export default function Footer() {
           >
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <motion.a
-              href="mailto:hello@devportfolio.com"
+              href="mailto:ibrahim.al@div.edu.az"
               className="flex items-center text-slate-300 hover:text-white transition-colors"
               whileHover={{ x: 5 }}
             >
               <Mail className="h-4 w-4 mr-2" />
-              hello@devportfolio.com
+              ibrahim.al@div.edu.az
             </motion.a>
           </motion.div>
         </div>

@@ -6,6 +6,7 @@ import { ArrowRight, Sparkles, Zap, Rocket } from "lucide-react"
 import Link from "next/link"
 import type { RefObject } from "react"
 import type { MotionValue } from "framer-motion"
+import Image from "next/image"
 
 interface HeroSectionProps {
   heroRef: RefObject<HTMLElement>
@@ -84,8 +85,26 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
           animate="animate"
           transition={{ delay: 1 }}
         >
-          <Rocket size={50} />
-        </motion.div>
+          <Image 
+            src="/images/js.png"
+            alt="js"
+            width={30}
+            height={30}
+          />  
+                  </motion.div>
+        <motion.div
+          className="absolute -bottom-20 right-10 text-pink-400/30"
+          variants={floatingAnimation}
+          animate="animate"
+          transition={{ delay: 1 }}
+        >
+          <Image 
+            src="/images/react.png"
+            alt="react"
+            width={50}
+            height={50}
+          />  
+                  </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 100, scale: 0.8 }}

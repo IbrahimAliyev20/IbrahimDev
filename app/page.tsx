@@ -61,29 +61,7 @@ export default function HomePage() {
           }}
         />
 
-        {[...Array(12)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 2,
-              repeat: Number.POSITIVE_INFINITY,
-              delay: Math.random() * 2,
-              ease: "easeInOut",
-            }}
-          >
-            <Sparkles className="h-4 w-4 text-emerald-400/70" />
-          </motion.div>
-        ))}
+       
 
         <motion.div
           className="absolute w-96 h-96 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full blur-3xl pointer-events-none"
