@@ -212,7 +212,7 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-200 to-purple-600 bg-clip-text text-transparent"
+                className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-200 to-cyan-800 bg-clip-text text-transparent"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
               >

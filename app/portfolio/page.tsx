@@ -33,10 +33,10 @@ export default function PortfolioPage() {
           <div className="container mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                {pageContent.title}
+                My Portfolio
               </h1>
               <p className="text-xl text-cyan-100 max-w-3xl mx-auto leading-relaxed">
-                {pageContent.description}
+                A showcase of my recent projects and creative solutions. Each project represents a unique challenge and innovative approach to modern web development.
               </p>
             </motion.div>
           </div>
@@ -128,7 +128,7 @@ export default function PortfolioPage() {
                       <div>
                         <motion.div whileHover={{ x: 5 }}>
                           <Link href={`/portfolio/${project.id}`} className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
-                            {pageContent.viewDetailsButton}
+                            Read more
                             <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                           </Link>
                         </motion.div>
@@ -145,13 +145,13 @@ export default function PortfolioPage() {
           <div className="container mx-auto">
             <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                {pageContent.statsTitle}
+              Project Statistics
               </h2>
               <p className="text-xl text-slate-200">
-                {pageContent.statsDescription}
+                Numbers that showcase my experience and dedication.
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {stats.map((stat, index) => (
                 <motion.div key={index} className="text-center bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: index * 0.1 }} whileHover={{ scale: 1.05, y: -5 }}>
                   <motion.div className="text-4xl mb-4 text-white" animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, delay: index * 0.5 }}>

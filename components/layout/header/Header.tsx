@@ -35,16 +35,18 @@ export default function Header() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
-            whileHover={{
-              scale: 1.05,
-              filter: "drop-shadow(0 0 8px rgba(59, 130, 246, 0.5))",
-            }}
-            transition={{ duration: 0.3 }}
-          >
-            <Link href="/">AliyevDev</Link>
-          </motion.div>
+    <Link href="/" className="flex items-center space-x-3">
+    <div className="relative">
+      <div className="w-8 h-8 border-2 border-blue-400 rounded-full"></div>
+      <div className="absolute top-1 left-1 w-6 h-6 border-2 border-purple-400 rounded-full"></div>
+      <div className="absolute top-2 left-2 w-4 h-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+    </div>
+    <div className="text-xl font-bold">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+        AliyevDev
+      </span>
+    </div>
+  </Link>
 
           {/* Desktop Navigation */}
           <Nav navItems={navItems} pathname={pathname} />

@@ -31,21 +31,18 @@ export default function Footer() {
 
       <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
-          <motion.div
-            className="md:col-span-1"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.div
-              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4"
-              whileHover={{ scale: 1.05 }}
-            >
-              AliyevDev
-            </motion.div>
-       
-          </motion.div>
+      <div className="flex items-center space-x-3">
+    <div className="relative">
+      <div className="w-8 h-8 border-2 border-blue-400 rounded-full"></div>
+      <div className="absolute top-1 left-1 w-6 h-6 border-2 border-purple-400 rounded-full"></div>
+      <div className="absolute top-2 left-2 w-4 h-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+    </div>
+    <div className="text-xl font-bold">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+        AliyevDev
+      </span>
+    </div>
+  </div>
 
           <motion.div
             className="md:col-span-1"
@@ -126,7 +123,7 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <p>&copy; {new Date().getFullYear()} DevPortfolio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} AliyevDev. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>
