@@ -8,18 +8,17 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "DevPortfolio - Elite Front-End Developer",
+  title: "İbrahimDev - Frontend Developer",
   description:
-    "Senior Front-End Developer & UI/UX Designer specializing in creating visually stunning, high-performance web experiences with modern technologies.",
-  keywords: ["frontend developer", "react developer", "nextjs", "typescript", "ui/ux design"],
-  authors: [{ name: "DevPortfolio" }],
+    "Frontend Developer specializing in building clean, efficient, and high-performance web applications with modern technologies like React, Next.js, and TypeScript.",
+  keywords: ["frontend developer", "react developer", "nextjs", "typescript", "ibrahim aliyev", "aliyevdev", "figma to code", "web developer baku"],
+  authors: [{ name: "İbrahim Aliyev" }],
   openGraph: {
-    title: "DevPortfolio - Elite Front-End Developer",
-    description: "Creating exceptional digital experiences with cutting-edge technology",
+    title: "İbrahimDev - Frontend Developer Portfolio",
+    description: "Transforming ideas into modern and efficient web applications.",
     type: "website",
   },
-    generator: 'v0.dev'
-}
+};
 
 export default async function RootLayout({
   children,
