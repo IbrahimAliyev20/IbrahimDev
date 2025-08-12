@@ -89,8 +89,7 @@ export default function MobileNav({
         >
           <Button
             onClick={handleDownloadCV}
-            className="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-          >
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white">
             Download CV
           </Button>
         </motion.div>
