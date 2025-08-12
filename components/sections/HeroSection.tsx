@@ -24,7 +24,7 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
       "Building clean, efficient, and high-performance web interfaces with modern technologies.",
     buttons: {
       primary: "View My Work",
-      secondary: "Download CV",
+      secondary: "CV",
     },
     stats: {
       projects: "Projects Completed",
@@ -184,6 +184,10 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
             </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}>
+        <Link
+          href="/cv"
+          rel="noopener noreferrer"
+        > 
             <Button
               variant="outline"
               size="lg"
@@ -191,6 +195,7 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
             >
               {heroTranslations.buttons.secondary}
             </Button>
+            </Link>
           </motion.div>
         </motion.div>
 
