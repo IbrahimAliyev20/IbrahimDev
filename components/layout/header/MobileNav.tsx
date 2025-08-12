@@ -1,22 +1,35 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface NavItem {
-  href: string
-  label: string
+  href: string;
+  label: string;
 }
 
 interface MobileNavProps {
-  isMenuOpen: boolean
-  navItems: NavItem[]
-  pathname: string
-  onClose: () => void
+  isMenuOpen: boolean;
+  navItems: NavItem[];
+  pathname: string;
+  onClose: () => void;
 }
+const handleDownloadCV = () => {
+  const link = document.createElement("a");
+  link.href = "/cv.pdf";
+  link.download = "cv.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
-export default function MobileNav({ isMenuOpen, navItems, pathname, onClose }: MobileNavProps) {
+export default function MobileNav({
+  isMenuOpen,
+  navItems,
+  pathname,
+  onClose,
+}: MobileNavProps) {
   return (
     <motion.div
       className={`md:hidden overflow-hidden ${isMenuOpen ? "block" : "hidden"}`}
@@ -43,7 +56,7 @@ export default function MobileNav({ isMenuOpen, navItems, pathname, onClose }: M
         animate={isMenuOpen ? "visible" : "hidden"}
       >
         {navItems.map((item, index) => {
-          const isActive = pathname === item.href
+          const isActive = pathname === item.href;
 
           return (
             <motion.div
@@ -56,14 +69,16 @@ export default function MobileNav({ isMenuOpen, navItems, pathname, onClose }: M
               <Link
                 href={item.href}
                 className={`block font-medium px-4 transition-colors ${
-                  isActive ? "text-blue-600" : "text-slate-600 hover:text-blue-600"
+                  isActive
+                    ? "text-blue-600"
+                    : "text-slate-600 hover:text-blue-600"
                 }`}
                 onClick={onClose}
               >
                 {item.label}
               </Link>
             </motion.div>
-          )
+          );
         })}
         <motion.div
           variants={{
@@ -72,9 +87,14 @@ export default function MobileNav({ isMenuOpen, navItems, pathname, onClose }: M
           }}
           className="px-4"
         >
-          <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white">Contact Me</Button>
+          <Button
+            onClick={handleDownloadCV}
+            className="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            Download CV
+          </Button>
         </motion.div>
       </motion.div>
     </motion.div>
-  )
+  );
 }
