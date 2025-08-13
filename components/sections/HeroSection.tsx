@@ -170,15 +170,15 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
             <Link href="/portfolio">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white px-8 py-4 text-lg group shadow-2xl hover:shadow-3xl transition-all duration-300"
+                className="bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 text-lg group transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
               >
                 {heroTranslations.buttons.primary}
                 <motion.div
                   className="ml-2"
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                 >
-                  <ArrowRight className="h-5 w-5" />
+                  <Zap className="h-5 w-5" />
                 </motion.div>
               </Button>
             </Link>
@@ -188,11 +188,10 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
           href="/cv"
           rel="noopener noreferrer"
         > 
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-blue-400 hover:text-blue-600 px-8 py-4 text-lg bg-white/50 backdrop-blur-sm shadow-lg transition-all duration-300"
-            >
+             <Button
+                size="lg"
+                className="bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 text-lg group transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
+              >
               {heroTranslations.buttons.secondary}
             </Button>
             </Link>

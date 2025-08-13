@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 interface NavItem {
@@ -15,14 +14,6 @@ interface MobileNavProps {
   pathname: string;
   onClose: () => void;
 }
-const handleDownloadCV = () => {
-  const link = document.createElement("a");
-  link.href = "/cv.pdf";
-  link.download = "cv.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
 
 export default function MobileNav({
   isMenuOpen,
@@ -41,7 +32,7 @@ export default function MobileNav({
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       <motion.div
-        className="flex flex-col space-y-4 py-6 border-t border-slate-200 bg-white/50 backdrop-blur-sm rounded-b-2xl mt-4"
+        className="flex flex-col space-y-4 py-6 border-t border-slate-200  backdrop-blur-lg rounded-b-2xl mt-4"
         variants={{
           hidden: { opacity: 0 },
           visible: {
@@ -70,8 +61,8 @@ export default function MobileNav({
                 href={item.href}
                 className={`block font-medium px-4 transition-colors ${
                   isActive
-                    ? "text-blue-600"
-                    : "text-slate-600 hover:text-blue-600"
+                    ? "text-white"
+                    : "text-cyan-100 hover:text-cyan-200"
                 }`}
                 onClick={onClose}
               >
@@ -86,13 +77,7 @@ export default function MobileNav({
             visible: { opacity: 1, x: 0 },
           }}
           className="px-4"
-        >
-          <Button
-            onClick={handleDownloadCV}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-            Download CV
-          </Button>
-        </motion.div>
+        ></motion.div>
       </motion.div>
     </motion.div>
   );
