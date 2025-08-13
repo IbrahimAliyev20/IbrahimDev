@@ -51,7 +51,7 @@ export default function Footer() {
     </div>
     <div className="text-xl font-bold">
       <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
-        AliyevDev
+        IbrahimDev
       </span>
     </div>
   </div>

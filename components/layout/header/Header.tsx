@@ -2,13 +2,13 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useScrollY } from "@/hooks/useScrollY"
 import Nav from "./Nav"
 import MobileNav from "./MobileNav"
+import { useScrollY } from "../../../hooks/useScrollY"
+import { Button } from "../../ui/button"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -49,7 +49,7 @@ export default function Header() {
             </div>
             <div className="text-xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
-                AliyevDev
+                IbrahimDev
               </span>
             </div>
           </Link>
