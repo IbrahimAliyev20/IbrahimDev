@@ -157,7 +157,7 @@ export const projects: Project[] = [
     subtitle: "The Digital Hub for the Construction & Real Estate Industry",
     longDescription:
       "This project involved creating a multi-functional B2B platform to serve as the central digital hub for the global construction and real estate industry. The primary goal was to unite fragmented markets by providing a single ecosystem where companies and professionals can connect. The platform enables users to post various ads, find procurement tenders and job vacancies, participate in auctions, and access integrated banking services. Ultimately, it functions as a comprehensive tool designed to foster business connections, increase transparency within the sector, and build a stronger professional community.",
-    gallery: ["/images/gbaru1.png", "/images/gbaru2.png"],
+    gallery: ["/images/gbaru-1.png", "/images/gbaru-2.png"],
     client: "Gbaru",
     duration: "2 Months",
     team: "3 developers, 1 designer",

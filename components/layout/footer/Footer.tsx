@@ -3,30 +3,42 @@
 import { motion } from "framer-motion"
 import { Github, Linkedin, Instagram, Mail } from "lucide-react"
 import Link from "next/link"
+import { useEffect, useState } from "react"
+
+interface DotSpec {
+  left: string
+  top: string
+  duration: number
+  delay: number
+}
 
 export default function Footer() {
+  const [dots, setDots] = useState<DotSpec[]>([])
+
+  useEffect(function generateDotsOnClient() {
+    const nextDots: DotSpec[] = Array.from({ length: 20 }).map(() => {
+      const leftPct = `${Math.random() * 100}%`
+      const topPct = `${Math.random() * 100}%`
+      const duration = 3 + Math.random() * 2
+      const delay = Math.random() * 2
+      return { left: leftPct, top: topPct, duration, delay }
+    })
+    setDots(nextDots)
+  }, [])
   return (
     <footer className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-12 px-6 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Number.POSITIVE_INFINITY,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
+        {dots.map(function renderDot(dot, i) {
+          return (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-white rounded-full"
+              style={{ left: dot.left, top: dot.top }}
+              animate={{ y: [0, -100, 0], opacity: [0, 1, 0] }}
+              transition={{ duration: dot.duration, repeat: Number.POSITIVE_INFINITY, delay: dot.delay }}
+            />
+          )
+        })}
       </div>
 
       <div className="container mx-auto relative z-10">

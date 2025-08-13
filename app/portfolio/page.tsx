@@ -9,7 +9,7 @@ import Image from "next/image";
 import FooterSection from "@/components/layout/footer/Footer";
 import { useMousePosition } from "@/hooks/useMousePosition";
 
-import { pageContent, portfolioFilters, stats, projects } from "@/data/portfolio-page-data";
+import { portfolioFilters, stats, projects } from "@/data/portfolio-page-data";
 
 export default function PortfolioPage() {
   const { mousePosition } = useMousePosition();
@@ -169,7 +169,6 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <FooterSection />
       </div>
     </div>
   );

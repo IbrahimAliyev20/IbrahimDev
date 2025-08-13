@@ -81,7 +81,6 @@ export default function HomePage() {
 
       <QuickLinksSection />
 
-      <FooterSection />
     </div>
   )
 }

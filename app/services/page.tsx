@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Star } from "lucide-react";
 import { useMousePosition } from "@/hooks/useMousePosition";
-import FooterSection from "@/components/layout/footer/Footer";
 
 import { pageContent, services, processSteps } from "@/data/services-data";
 import SkillsCarousel from "@/components/SkillsCarousel";
@@ -103,7 +102,6 @@ export default function ServicesPage() {
         </section>
 
               <SkillsCarousel />
-        <FooterSection />
       </div>
     </div>
   );

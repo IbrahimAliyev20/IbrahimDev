@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/layout/header/Header"
 import { ThemeProvider } from "@/components/theme-provider"
+import Footer from "@/components/layout/footer/Footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -31,6 +32,9 @@ export default async function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <Header />
             {children}
+     
+         <Footer />
+
         </ThemeProvider>
       </body>
     </html>
