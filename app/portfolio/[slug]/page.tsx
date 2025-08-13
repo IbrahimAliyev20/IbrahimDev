@@ -2,8 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowLeft,
   ExternalLink,
@@ -19,9 +17,11 @@ import {
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { useMousePosition } from "@/hooks/useMousePosition";
-import Footer from "@/components/layout/footer/Footer";
-import { projects, pageContent } from "@/data/portfolio-page-data";
+import { pageContent } from "../../../data/portfolio-page-data";
+import { projects } from "../../../data/portfolio-page-data";
+import { Button } from "../../../components/ui/button";
+import useMousePosition from "../../../hooks/useMousePosition";
+import { Card, CardContent } from "../../../components/ui/card";
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;

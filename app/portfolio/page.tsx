@@ -1,15 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../../components/ui/card";
 import { ExternalLink, Github, Calendar, Tag, ArrowRight, Filter } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import FooterSection from "@/components/layout/footer/Footer";
-import { useMousePosition } from "@/hooks/useMousePosition";
 
-import { portfolioFilters, stats, projects } from "@/data/portfolio-page-data";
+import { portfolioFilters, stats, projects } from "../../data/portfolio-page-data";
+import useMousePosition from "../../hooks/useMousePosition";
 
 export default function PortfolioPage() {
   const { mousePosition } = useMousePosition();

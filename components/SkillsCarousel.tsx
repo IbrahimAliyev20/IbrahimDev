@@ -1,7 +1,7 @@
 "use client";
 
-import { skills } from "@/data/services-data";
 import Marquee from "react-fast-marquee";
+import { skills } from "../data/services-data";
 
 export default function SkillsCarousel() {
   return (

@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Star } from "lucide-react";
-import { useMousePosition } from "@/hooks/useMousePosition";
 
-import { pageContent, services, processSteps } from "@/data/services-data";
-import SkillsCarousel from "@/components/SkillsCarousel";
+import useMousePosition from "../../hooks/useMousePosition";
+import SkillsCarousel from "../../components/SkillsCarousel";
+import { pageContent, processSteps, services } from "../../data/services-data";
+import { Card, CardContent } from "../../components/ui/card";
 
 export default function ServicesPage() {
   const { mousePosition } = useMousePosition();

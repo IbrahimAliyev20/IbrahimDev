@@ -1,12 +1,10 @@
 "use client"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { Sparkles } from "lucide-react"
 import { useRef } from "react"
-import { useMousePosition } from "@/hooks/useMousePosition"
-import { useScrollY } from "@/hooks/useScrollY"
-import HeroSection from "@/components/sections/HeroSection"
-import QuickLinksSection from "@/components/sections/QuickLinksSection"
-import FooterSection from "@/components/layout/footer/Footer"
+import { useScrollY } from "../hooks/useScrollY"
+import HeroSection from "../components/sections/HeroSection"
+import QuickLinksSection from "../components/sections/QuickLinksSection"
+import useMousePosition from "../hooks/useMousePosition"
 
 export default function HomePage() {
   const { mousePosition } = useMousePosition()

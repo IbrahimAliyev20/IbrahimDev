@@ -2,9 +2,9 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import Header from "@/components/layout/header/Header"
-import { ThemeProvider } from "@/components/theme-provider"
-import Footer from "@/components/layout/footer/Footer"
+import { ThemeProvider } from "next-themes"
+import Header from "../components/layout/header/Header"
+import Footer from "../components/layout/footer/Footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     description: "Transforming ideas into modern and efficient web applications.",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default async function RootLayout({

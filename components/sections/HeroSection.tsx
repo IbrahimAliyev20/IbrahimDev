@@ -1,12 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles, Zap, Rocket } from "lucide-react"
+import {  Sparkles, Zap} from "lucide-react"
 import Link from "next/link"
 import type { RefObject } from "react"
 import type { MotionValue } from "framer-motion"
 import Image from "next/image"
+import { Button } from "../ui/button"
 
 interface HeroSectionProps {
   heroRef: RefObject<HTMLElement>
@@ -24,7 +24,7 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
       "Building clean, efficient, and high-performance web interfaces with modern technologies.",
     buttons: {
       primary: "View My Work",
-      secondary: "CV",
+      secondary: "View CV",
     },
     stats: {
       projects: "Projects Completed",
@@ -170,7 +170,7 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
             <Link href="/portfolio">
               <Button
                 size="lg"
-                className="bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 text-lg group transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
+                className="bg-transparent border-2 border-cyan-400 text-white hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 text-lg group transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
               >
                 {heroTranslations.buttons.primary}
                 <motion.div
@@ -190,7 +190,7 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
         > 
              <Button
                 size="lg"
-                className="bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 text-lg group transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
+                className="bg-transparent border-2 border-cyan-400 text-white hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 text-lg group transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
               >
               {heroTranslations.buttons.secondary}
             </Button>

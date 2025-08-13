@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Briefcase, Rocket } from "lucide-react" 
+import {  Briefcase, Rocket } from "lucide-react" 
 import { QuickLinkCard } from "../card/QuickLinkCard";
 
 export default function QuickLinksSection() {
