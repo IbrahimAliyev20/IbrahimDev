@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Github, Linkedin, Instagram, Mail } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -44,16 +45,18 @@ export default function Footer() {
       <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
       <div className="flex items-center space-x-3">
-    <div className="relative">
-      <div className="w-8 h-8 border-2 border-blue-400 rounded-full"></div>
-      <div className="absolute top-1 left-1 w-6 h-6 border-2 border-purple-400 rounded-full"></div>
-      <div className="absolute top-2 left-2 w-4 h-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-    </div>
-    <div className="text-xl font-bold">
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
-        IbrahimDev
-      </span>
-    </div>
+            <Link href="/">
+          <Image
+            src="/images/logo.png"
+            alt="Logo"
+            width={1000}
+            height={1000}
+            className="w-12 h-12 md:w-36 md:h-36"
+          />
+            
+          
+          </Link>
+   
   </div>
 
           <motion.div
