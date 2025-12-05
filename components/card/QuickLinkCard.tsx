@@ -1,4 +1,3 @@
-import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
@@ -10,7 +9,6 @@ interface QuickLinkCardProps {
   description: string;
   cta: string;
   textColorClass: string;
-  animationProps?: object;
   backgroundImage?: string; 
 }
 
@@ -22,11 +20,10 @@ export function QuickLinkCard({
   description,
   cta,
   textColorClass,
-  animationProps = {},
   backgroundImage
 }: QuickLinkCardProps) {
   return (
-    <motion.div whileHover={{ scale: 1.05, y: -10 }} transition={{ duration: 0.3 }}>
+    <div>
       <Link href={href}>
         <div
           className={`p-10 rounded-xl text-white shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group ${gradientClasses} bg-cover bg-center`}
@@ -34,9 +31,9 @@ export function QuickLinkCard({
             backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined
           }}
         >
-          <motion.div className="text-4xl mb-4" {...animationProps}>
+          <div className="text-4xl mb-4">
             {icon}
-          </motion.div>
+          </div>
           <h3 className="text-2xl font-bold mb-3">{title}</h3>
           <p className={`${textColorClass} mb-4`}>{description}</p>
           <div className="flex items-center text-white group-hover:translate-x-2 transition-transform">
@@ -44,6 +41,6 @@ export function QuickLinkCard({
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   )
 }

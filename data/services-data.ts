@@ -115,6 +115,5 @@ export const skills = [
   "HTML5",
   "CSS3",
   "TailwindCSS",
-  "Framer Motion",
   "Git",
 ];

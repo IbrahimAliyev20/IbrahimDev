@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Github, Linkedin, Instagram, Mail } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -31,12 +30,10 @@ export default function Footer() {
       <div className="absolute inset-0 opacity-10">
         {dots.map(function renderDot(dot, i) {
           return (
-            <motion.div
+            <div
               key={i}
               className="absolute w-2 h-2 bg-white rounded-full"
               style={{ left: dot.left, top: dot.top }}
-              animate={{ y: [0, -100, 0], opacity: [0, 1, 0] }}
-              transition={{ duration: dot.duration, repeat: Number.POSITIVE_INFINITY, delay: dot.delay }}
             />
           )
         })}
@@ -59,13 +56,7 @@ export default function Footer() {
    
   </div>
 
-          <motion.div
-            className="md:col-span-1"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-          >
+          <div className="md:col-span-1">
             <h4 className="text-white font-semibold mb-4">Navigation</h4>
             <div className="space-y-2">
               {[
@@ -74,23 +65,17 @@ export default function Footer() {
                 { href: "/portfolio", label: "Portfolio" },
               ].map((link, index) => {
                 return (
-                  <motion.div key={index} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
+                  <div key={index}>
                     <Link href={link.href} className="block text-slate-300 hover:text-white transition-colors">
                       {link.label}
                     </Link>
-                  </motion.div>
+                  </div>
                 )
               })}
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="md:col-span-1"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <div className="md:col-span-1">
             <h4 className="text-white font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
               {[
@@ -98,48 +83,33 @@ export default function Footer() {
                 { icon: Linkedin, href: "https://www.linkedin.com/in/ibrahim-aliyev-668283307/", color: "hover:bg-blue-600" },
                 { icon: Instagram, href: "https://www.instagram.com/iboaliyev020/", color: "hover:bg-pink-600"},
               ].map((social, index) => (
-                <motion.a
+                <a
                   key={index}
                   href={social.href}
                   className={`w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center text-slate-300 hover:text-white ${social.color} transition-all duration-300`}
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
                   target="_blank"
                 >
                   <social.icon className="h-5 w-5" />
-                </motion.a>
+                </a>
               ))}
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="md:col-span-1"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
+          <div className="md:col-span-1">
             <h4 className="text-white font-semibold mb-4">Contact</h4>
-            <motion.a
+            <a
               href="mailto:ibrahim.al@div.edu.az"
               className="flex items-center text-slate-300 hover:text-white transition-colors"
-              whileHover={{ x: 5 }}
             >
               <Mail className="h-4 w-4 mr-2" />
               ibrahim.al@div.edu.az
-            </motion.a>
-          </motion.div>
+            </a>
+          </div>
         </div>
 
-        <motion.div
-          className="border-t border-slate-700 mt-12 pt-8 text-center text-slate-400"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
+        <div className="border-t border-slate-700 mt-12 pt-8 text-center text-slate-400">
           <p>&copy; {new Date().getFullYear()} AliyevDev. All rights reserved.</p>
-        </motion.div>
+        </div>
       </div>
     </footer>
   )

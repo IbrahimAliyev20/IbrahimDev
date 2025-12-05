@@ -6,6 +6,28 @@
   .text-balance {
     text-wrap: balance;
   }
+  
+  .shiny-text {
+    background: linear-gradient(
+      90deg,
+      #e0f2fe 0%,
+      #ffffff 25%,
+      #a5f3fc 50%,
+      #ffffff 75%,
+      #e0f2fe 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+  }
+  
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
 }
 
 @layer base {

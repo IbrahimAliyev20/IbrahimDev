@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface NavItem {
@@ -22,41 +21,15 @@ export default function MobileNav({
   onClose,
 }: MobileNavProps) {
   return (
-    <motion.div
-      className={`md:hidden overflow-hidden ${isMenuOpen ? "block" : "hidden"}`}
-      initial={{ opacity: 0, height: 0 }}
-      animate={{
-        opacity: isMenuOpen ? 1 : 0,
-        height: isMenuOpen ? "auto" : 0,
-      }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+    <div
+      className={`md:hidden overflow-hidden transition-all duration-400 ${isMenuOpen ? "block opacity-100" : "hidden opacity-0"}`}
     >
-      <motion.div
-        className="flex flex-col space-y-4 py-6 border-t border-slate-200  backdrop-blur-lg rounded-b-2xl mt-4"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              staggerChildren: 0.1,
-              delayChildren: 0.1,
-            },
-          },
-        }}
-        initial="hidden"
-        animate={isMenuOpen ? "visible" : "hidden"}
-      >
+      <div className="flex flex-col space-y-4 py-6 border-t border-slate-200  backdrop-blur-lg rounded-b-2xl mt-4">
         {navItems.map((item, index) => {
           const isActive = pathname === item.href;
 
           return (
-            <motion.div
-              key={index}
-              variants={{
-                hidden: { opacity: 0, x: -20 },
-                visible: { opacity: 1, x: 0 },
-              }}
-            >
+            <div key={index}>
               <Link
                 href={item.href}
                 className={`block font-medium px-4 transition-colors ${
@@ -68,17 +41,11 @@ export default function MobileNav({
               >
                 {item.label}
               </Link>
-            </motion.div>
+            </div>
           );
         })}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, x: -20 },
-            visible: { opacity: 1, x: 0 },
-          }}
-          className="px-4"
-        ></motion.div>
-      </motion.div>
-    </motion.div>
+        <div className="px-4"></div>
+      </div>
+    </div>
   );
 }

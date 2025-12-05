@@ -1,27 +1,25 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import {  Sparkles, Zap} from "lucide-react"
-import Link from "next/link"
-import type { RefObject } from "react"
-import type { MotionValue } from "framer-motion"
-import Image from "next/image"
-import { Button } from "../ui/button"
+import { Sparkles, Zap } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "../ui/button";
+import CountUp from "../CountUp";
+import RotatingText from "../RotatingText";
 
-interface HeroSectionProps {
-  heroRef: RefObject<HTMLElement>
-  heroOpacity: MotionValue<number>
-  heroScale: MotionValue<number>
-}
-
-export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSectionProps) {
+export default function HeroSection() {
   const heroTranslations = {
     title: {
       line1: "Ibrahim Aliyev",
       line2: "Frontend Developer",
     },
-    description:
-      "Building clean, efficient, and high-performance web interfaces with modern technologies.",
+    description: {
+      static: "Building",
+      rotatingWords1: ["clean", "efficient", "beautiful", "modern", "responsive"],
+      staticMiddle: "and",
+      rotatingWords2: ["high-performance", "scalable", "interactive", "innovative", "user-friendly"],
+      staticEnd: "web interfaces with modern technologies.",
+    },
     buttons: {
       primary: "View My Work",
       secondary: "View CV",
@@ -31,225 +29,134 @@ export default function HeroSection({ heroRef, heroOpacity, heroScale }: HeroSec
       experience: "Years Experience",
       satisfaction: "Client Satisfaction",
     },
-  }
-
-  const floatingAnimation = {
-    animate: {
-      y: [0, -20, 0],
-      rotate: [0, 5, -5, 0],
-      transition: {
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut" as const,
-      },
-    },
-  }
-
-  const sparkleAnimation = {
-    animate: {
-      scale: [1, 1.5, 1],
-      opacity: [0.5, 1, 0.5],
-      rotate: [0, 180, 360],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut" as const,
-      },
-    },
-  }
+  };
 
   return (
-    <motion.section
-      ref={heroRef}
-      className="min-h-screen flex items-center justify-center relative px-6 pt-20"
-      style={{ opacity: heroOpacity, scale: heroScale }}
-    >
+    <section className="min-h-screen flex items-center justify-center relative px-6 pt-20">
       <div className="container mx-auto text-center relative z-10">
-        <motion.div
-          className="absolute -top-20 -left-20 text-blue-400/30"
-          variants={floatingAnimation}
-          animate="animate"
-        >
-          <Zap size={60} />
-        </motion.div>
-        <motion.div
-          className="absolute -top-10 -right-20 text-purple-400/30"
-          variants={sparkleAnimation}
-          animate="animate"
-        >
-          <Sparkles size={40} />
-        </motion.div>
-        <motion.div
-          className="absolute -bottom-20 left-10 text-pink-400/30"
-          variants={floatingAnimation}
-          animate="animate"
-          transition={{ delay: 1 }}
-        >
-          <Image 
-            src="/images/js.png"
-            alt="js"
-            width={30}
-            height={30}
-          />  
-                  </motion.div>
-        <motion.div
-          className="absolute -bottom-20 right-10 text-pink-400/30"
-          variants={floatingAnimation}
-          animate="animate"
-          transition={{ delay: 1 }}
-        >
-          <Image 
-            src="/images/react.png"
-            alt="react"
-            width={50}
-            height={50}
-          />  
-                  </motion.div>
+        <div className="absolute -bottom-20 left-10 text-pink-400/30">
+          <Image src="/images/js.png" alt="js" width={30} height={30} />
+        </div>
+        <div className="absolute -bottom-20 right-10 text-pink-400/30">
+          <Image src="/images/react.png" alt="react" width={50} height={50} />
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 100, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-        >
-          <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
-            animate={{
-              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            style={{
-              background: "linear-gradient(45deg, #3B82F6, #8B5CF6, #EC4899, #10B981, #3B82F6)",
-              backgroundSize: "300% 300%",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
+        <div>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
             {heroTranslations.title.line1}
             <br />
-            <motion.span
-              animate={{
-                textShadow: [
-                  "0 0 20px rgba(59, 130, 246, 0.5)",
-                  "0 0 40px rgba(139, 92, 246, 0.5)",
-                  "0 0 20px rgba(59, 130, 246, 0.5)",
-                ],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="text-4xl"
-            >
-              {heroTranslations.title.line2}
-            </motion.span>
-          </motion.h1>
-        </motion.div>
+            <span className="text-4xl font-bold shiny-text">{heroTranslations.title.line2}</span>
+          </h1>
+        </div>
 
-        <motion.p
-          className="text-xl md:text-2xl text-cyan-100 mb-8 max-w-3xl mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-        >
-          {heroTranslations.description}
-        </motion.p>
+        <div className="text-xl md:text-2xl text-cyan-100 mb-8 max-w-3xl mx-auto leading-relaxed min-h-[4rem] flex items-center justify-center">
+          <p className="text-center">
+            <span className="text-cyan-100">{heroTranslations.description.static} </span>
+            <span className="inline-block text-white bg-cyan-500/80 px-2 py-1 rounded font-semibold mx-1 uppercase">
+              <RotatingText
+                texts={heroTranslations.description.rotatingWords1}
+                rotationInterval={2500}
+                auto={true}
+                loop={true}
+                splitBy="characters"
+                staggerDuration={0.03}
+                staggerFrom="first"
+                transition={{
+                  type: "spring",
+                  damping: 25,
+                  stiffness: 300,
+                }}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                mainClassName="inline-block uppercase"
+                elementLevelClassName="text-white font-semibold uppercase"
+              />
+            </span>
+            <span className="text-cyan-100"> {heroTranslations.description.staticMiddle} </span>
+            <span className="inline-block text-white bg-cyan-500/80 px-2 py-1 rounded font-semibold mx-1 uppercase">
+              <RotatingText
+                texts={heroTranslations.description.rotatingWords2}
+                rotationInterval={2500}
+                auto={true}
+                loop={true}
+                splitBy="characters"
+                staggerDuration={0.03}
+                staggerFrom="first"
+                transition={{
+                  type: "spring",
+                  damping: 25,
+                  stiffness: 300,
+                }}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                mainClassName="inline-block uppercase"
+                elementLevelClassName="text-white font-semibold uppercase"
+              />
+            </span>
+            <span className="text-cyan-100"> {heroTranslations.description.staticEnd}</span>
+          </p>
+        </div>
 
-        <motion.div
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9, ease: "easeOut" }}
-        >
-          <motion.div whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div>
             <Link href="/portfolio">
               <Button
                 size="lg"
-                className="bg-transparent border-2 border-cyan-400 text-white hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 text-lg group transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
+                className="relative bg-transparent border-2 border-cyan-400/80 text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 hover:border-cyan-300 px-10 py-5 text-lg font-semibold group transition-all duration-500 shadow-[0_0_25px_rgba(34,211,238,0.4)] hover:shadow-[0_0_40px_rgba(34,211,238,0.8),0_0_80px_rgba(59,130,246,0.4)] rounded-3xl backdrop-blur-sm hover:scale-105 active:scale-95 overflow-hidden"
               >
-                {heroTranslations.buttons.primary}
-                <motion.div
-                  className="ml-2"
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                >
-                  <Zap className="h-5 w-5" />
-                </motion.div>
+                <span className="relative z-10">{heroTranslations.buttons.primary}</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
               </Button>
             </Link>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}>
-        <Link
-          href="/cv"
-          rel="noopener noreferrer"
-        > 
-             <Button
+          </div>
+          <div>
+            <Link href="/cv" rel="noopener noreferrer">
+              <Button
                 size="lg"
-                className="bg-transparent border-2 border-cyan-400 text-white hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 text-lg group transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
+                className="relative bg-transparent border-2 border-cyan-400/80 text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 hover:border-cyan-300 px-10 py-5 text-lg font-semibold group transition-all duration-500 shadow-[0_0_25px_rgba(34,211,238,0.4)] hover:shadow-[0_0_40px_rgba(34,211,238,0.8),0_0_80px_rgba(59,130,246,0.4)] rounded-3xl backdrop-blur-sm hover:scale-105 active:scale-95 overflow-hidden"
               >
-              {heroTranslations.buttons.secondary}
-            </Button>
+                <span className="relative z-10">{heroTranslations.buttons.secondary}</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+              </Button>
             </Link>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
-        >
-          {[
-            { number: "15+", labelKey: "projects" },
-            { number: "1+", labelKey: "experience" },
-            { number: "100%", labelKey: "satisfaction" },
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              className="text-center"
-              whileHover={{ scale: 1.1, y: -5 }}
-              transition={{ duration: 0.3 }}
-            >
-              <motion.div
-                className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-200 to-cyan-800 bg-clip-text text-transparent"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
-              >
-                {stat.number}
-              </motion.div>
-              <div className="text-cyan-100 font-medium">
-                {heroTranslations.stats[stat.labelKey as keyof typeof heroTranslations.stats]}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{
-          y: [0, 15, 0],
-          opacity: [0.5, 1, 0.5],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center bg-white/20 backdrop-blur-sm">
-          <motion.div
-            className="w-1 h-3 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mt-2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
+          </div>
         </div>
-      </motion.div>
-    </motion.section>
-  )
+
+        <div className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
+          {[
+            { number: "25+", labelKey: "projects" },
+            { number: "2+", labelKey: "experience" },
+            { number: "100%", labelKey: "satisfaction" },
+          ].map((stat, index) => {
+            const numericValue = parseInt(stat.number);
+            const suffix = stat.number.replace(/^\d+/, "");
+            return (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-200 to-cyan-800 bg-clip-text text-transparent">
+                  <CountUp
+                    from={0}
+                    to={numericValue}
+                    separator=","
+                    direction="up"
+                    duration={2}
+                    className="count-up-text"
+                  />
+                  {suffix}
+                </div>
+              <div className="text-cyan-100 font-medium">
+                {
+                  heroTranslations.stats[
+                    stat.labelKey as keyof typeof heroTranslations.stats
+                  ]
+                }
+              </div>
+            </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }

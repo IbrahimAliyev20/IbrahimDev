@@ -133,11 +133,6 @@ export const projects: Project[] = [
           "A utility-first CSS framework used alongside MUI for rapid custom styling and layout adjustments.",
       },
       {
-        name: "Framer Motion",
-        description:
-          "A production-ready animation library for React, used to add fluid animations and micro-interactions to the UI.",
-      },
-      {
         name: "Next-Intl",
         description:
           "A library for internationalization (i18n), used to provide the website's content in multiple languages.",
@@ -240,11 +235,6 @@ export const projects: Project[] = [
           "A modern, headless rich-text editor framework used for creating custom text editing experiences for ads and posts.",
       },
       {
-        name: "Framer Motion",
-        description:
-          "A production-ready animation library for React, used to create fluid and complex user interface animations.",
-      },
-      {
         name: "Socket.IO",
         description:
           "A library for enabling real-time, bidirectional communication, used for features like live notifications or chat.",
@@ -345,11 +335,6 @@ export const projects: Project[] = [
         name: "React Dropzone",
         description:
           "A library for creating a file upload interface with drag-and-drop functionality for startup documents.",
-      },
-      {
-        name: "Framer Motion",
-        description:
-          "A production-ready animation library for React, used to create fluid UI animations and transitions.",
       },
       {
         name: "Axios",

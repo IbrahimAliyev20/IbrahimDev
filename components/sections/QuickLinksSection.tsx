@@ -1,7 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
-import {  Briefcase, Rocket } from "lucide-react" 
+import { Briefcase, Rocket } from "lucide-react" 
 import { QuickLinkCard } from "../card/QuickLinkCard";
 
 export default function QuickLinksSection() {
@@ -15,10 +14,6 @@ export default function QuickLinksSection() {
       cta: "Learn More",
       textColorClass: "text-blue-100",
       backgroundImage: "/images/ServicesBg.png",
-      animationProps: { 
-        animate: { rotate: [0, 10, -10, 0] },
-        transition: { duration: 4, repeat: Infinity }
-      }
     },
     {
       href: "/portfolio",
@@ -29,10 +24,6 @@ export default function QuickLinksSection() {
       cta: "View Projects",
       textColorClass: "text-pink-100",
       backgroundImage: "/images/PortfolioBg.png", 
-      animationProps: { 
-        animate: { scale: [1, 1.1, 1] },
-        transition: { duration: 3, repeat: Infinity }
-      }
     }
   ];
 
@@ -44,17 +35,11 @@ export default function QuickLinksSection() {
           <p className="text-xl text-cyan-50">Discover what I can do for you</p>
         </div>
 
-        <motion.div
-          className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ staggerChildren: 0.2 }}
-        >
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {quickLinksData.map((card, index) => (
             <QuickLinkCard key={index} {...card} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )
