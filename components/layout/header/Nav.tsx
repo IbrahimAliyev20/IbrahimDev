@@ -14,7 +14,7 @@ interface NavProps {
 
 export default function Nav({ navItems, pathname }: NavProps) {
   return (
-    <div className="hidden md:flex items-center space-x-8">
+    <nav className="hidden md:flex items-center gap-6">
       {navItems.map((item) => {
         const isActive = pathname === item.href
 
@@ -22,14 +22,22 @@ export default function Nav({ navItems, pathname }: NavProps) {
           <Link
             key={item.href}
             href={item.href}
-            className={`font-medium transition-all duration-300 ${
-              isActive ? "text-cyan-50" : "text-cyan-200 hover:text-cyan-300"
+            className={`relative px-3 py-1.5 text-sm font-medium transition-all duration-300 rounded-md group ${
+              isActive
+                ? "text-white"
+                : "text-cyan-300/70 hover:text-white hover:bg-cyan-400/10"
             }`}
           >
             {item.label}
+            {isActive && (
+              <>
+                <span className="absolute inset-0 bg-cyan-400/10 rounded-md"></span>
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-cyan-400 rounded-full"></span>
+              </>
+            )}
           </Link>
         )
       })}
-    </div>
+    </nav>
   )
 }

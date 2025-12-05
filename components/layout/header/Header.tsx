@@ -37,42 +37,43 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrollY > 50 ? " backdrop-blur-xl border-b border-slate-200/50 shadow-lg shadow-slate-200/20" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrollY > 50
+          ? "backdrop-blur-md bg-slate-900/50 border-b border-slate-800/50"
+          : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 ">
+      <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/">
-          <Image
-            src="/images/logo.png"
-            alt="Logo"
-            width={1000}
-            height={1000}
-            className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full"
-          />
-            
-          
+          <Link href="/" className="group relative">
+            <div className="absolute inset-0 bg-cyan-400/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-1"></div>
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={1000}
+              height={1000}
+              className="relative w-10 h-10 md:w-12 md:h-12 object-cover rounded-full transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           <Nav navItems={navItems} pathname={pathname} />
 
-          <div className="flex items-center space-x-4">
-            <div>
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:block">
               <Button
                 onClick={handleDownloadCV}
-                className=" bg-transparent border-2 border-cyan-400 text-white hover:bg-cyan-400 hover:text-gray-900 px-4 py-2 md:px-8 md:py-0  text-sm md:text-lg group transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]"
+                className="relative bg-transparent border border-cyan-400/50 text-cyan-300 hover:text-white hover:bg-cyan-400/10 hover:border-cyan-400 px-5 py-2 text-sm font-medium transition-all duration-300 rounded-lg group overflow-hidden"
               >
-                Download CV
+                <span className="relative z-10">Download CV</span>
+                <span className="absolute inset-0 bg-cyan-400/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               </Button>
             </div>
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+              className="md:hidden p-2.5 rounded-lg text-cyan-300 hover:text-white hover:bg-cyan-400/10 transition-all duration-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
             >
-              <div className={`transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : ''}`}>
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </div>
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
@@ -82,6 +83,7 @@ export default function Header() {
           navItems={navItems}
           pathname={pathname}
           onClose={() => setIsMenuOpen(false)}
+          onDownloadCV={handleDownloadCV}
         />
       </nav>
     </header>

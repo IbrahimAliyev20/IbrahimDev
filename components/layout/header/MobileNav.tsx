@@ -12,6 +12,7 @@ interface MobileNavProps {
   navItems: NavItem[];
   pathname: string;
   onClose: () => void;
+  onDownloadCV: () => void;
 }
 
 export default function MobileNav({
@@ -19,32 +20,52 @@ export default function MobileNav({
   navItems,
   pathname,
   onClose,
+  onDownloadCV,
 }: MobileNavProps) {
   return (
     <div
-      className={`md:hidden overflow-hidden transition-all duration-400 ${isMenuOpen ? "block opacity-100" : "hidden opacity-0"}`}
+      className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
+        isMenuOpen
+          ? "max-h-96 opacity-100"
+          : "max-h-0 opacity-0"
+      }`}
     >
-      <div className="flex flex-col space-y-4 py-6 border-t border-slate-200  backdrop-blur-lg rounded-b-2xl mt-4">
+      <div className="flex flex-col gap-1 py-4 mt-4 border-t border-slate-800/50">
         {navItems.map((item, index) => {
           const isActive = pathname === item.href;
 
           return (
-            <div key={index}>
-              <Link
-                href={item.href}
-                className={`block font-medium px-4 transition-colors ${
-                  isActive
-                    ? "text-white"
-                    : "text-cyan-100 hover:text-cyan-200"
-                }`}
-                onClick={onClose}
-              >
-                {item.label}
-              </Link>
-            </div>
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`relative px-4 py-3 mx-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                isActive
+                  ? "text-white bg-cyan-400/10"
+                  : "text-cyan-300/70 hover:text-white hover:bg-cyan-400/10"
+              } ${isMenuOpen ? "fade-in-up" : ""}`}
+              onClick={onClose}
+              style={{
+                animationDelay: isMenuOpen ? `${index * 50}ms` : "0ms",
+              }}
+            >
+              {item.label}
+              {isActive && (
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-cyan-400 rounded-r-full"></span>
+              )}
+            </Link>
           );
         })}
-        <div className="px-4"></div>
+        <div className="px-4 pt-3 mt-2 border-t border-slate-800/50">
+          <button
+            onClick={() => {
+              onDownloadCV();
+              onClose();
+            }}
+            className="w-full px-4 py-2.5 text-sm font-medium text-cyan-300 border border-cyan-400/50 hover:text-white hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-200 rounded-lg"
+          >
+            Download CV
+          </button>
+        </div>
       </div>
     </div>
   );
