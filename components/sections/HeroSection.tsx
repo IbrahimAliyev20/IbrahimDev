@@ -102,24 +102,22 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <div>
             <Link href="/portfolio">
-              <Button
-                size="lg"
-                className="relative bg-transparent border-2 border-cyan-400/80 text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 hover:border-cyan-300 px-10 py-5 text-lg font-semibold group transition-all duration-500 shadow-[0_0_25px_rgba(34,211,238,0.4)] hover:shadow-[0_0_40px_rgba(34,211,238,0.8),0_0_80px_rgba(59,130,246,0.4)] rounded-3xl backdrop-blur-sm hover:scale-105 active:scale-95 overflow-hidden"
+              <button
+                className="h-11 rounded-md flex items-center justify-center relative bg-transparent border-2 border-cyan-400/80 text-white hover:bg-gradient-to-r hover:from-cyan-500/80 hover:to-blue-500/70 hover:border-cyan-400 px-10 py-5 text-lg font-semibold group transition-all duration-500  backdrop-blur-sm hover:scale-105 active:scale-95 overflow-hidden"
               >
                 <span className="relative z-10">{heroTranslations.buttons.primary}</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
-              </Button>
+              </button>
             </Link>
           </div>
           <div>
             <Link href="/cv" rel="noopener noreferrer">
-              <Button
-                size="lg"
-                className="relative bg-transparent border-2 border-cyan-400/80 text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 hover:border-cyan-300 px-10 py-5 text-lg font-semibold group transition-all duration-500 shadow-[0_0_25px_rgba(34,211,238,0.4)] hover:shadow-[0_0_40px_rgba(34,211,238,0.8),0_0_80px_rgba(59,130,246,0.4)] rounded-3xl backdrop-blur-sm hover:scale-105 active:scale-95 overflow-hidden"
+              <button
+                className="h-11 rounded-md flex items-center justify-center relative bg-transparent border-2 border-cyan-400/80 text-white hover:bg-gradient-to-r hover:from-cyan-500/80 hover:to-blue-500/70 hover:border-cyan-400 px-10 py-5 text-lg font-semibold group transition-all duration-500  backdrop-blur-sm hover:scale-105 active:scale-95 overflow-hidden"
               >
                 <span className="relative z-10">{heroTranslations.buttons.secondary}</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
-              </Button>
+              </button>
             </Link>
           </div>
         </div>

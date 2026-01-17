@@ -40,8 +40,10 @@ export default function Footer() {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid md:grid-cols-4 gap-8">
-      <div className="flex items-center space-x-3">
+        <div className="grid md:grid-cols-7 ">
+     
+     
+      <div className="md:col-span-4 flex items-center space-x-3">
             <Link href="/">
           <Image
             src="/images/logo.png"
@@ -56,7 +58,8 @@ export default function Footer() {
    
   </div>
 
-          <div className="md:col-span-1">
+     <div className="md:col-span-3 flex items-center  justify-between">
+     <div>
             <h4 className="text-white font-semibold mb-4">Navigation</h4>
             <div className="space-y-2">
               {[
@@ -75,7 +78,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-1">
+          <div >
             <h4 className="text-white font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
               {[
@@ -95,7 +98,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-1">
+          <div >
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <a
               href="mailto:ibrahim.al@div.edu.az"
@@ -105,6 +108,9 @@ export default function Footer() {
               ibrahim.al@div.edu.az
             </a>
           </div>
+     </div>
+
+
         </div>
 
         <div className="border-t border-slate-700 mt-12 pt-8 text-center text-slate-400">

@@ -61,7 +61,7 @@ export default function MobileNav({
               onDownloadCV();
               onClose();
             }}
-            className="w-full px-4 py-2.5 text-sm font-medium text-cyan-300 border border-cyan-400/50 hover:text-white hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-200 rounded-lg"
+            className="h-11 rounded-md flex items-center justify-center relative bg-transparent border-2 border-cyan-400/80 text-white hover:bg-gradient-to-r hover:from-cyan-500/80 hover:to-blue-500/70 hover:border-cyan-400 px-5 py-5 text-lg font-semibold group transition-all duration-500  backdrop-blur-sm hover:scale-105 active:scale-95 overflow-hidden"
           >
             Download CV
           </button>

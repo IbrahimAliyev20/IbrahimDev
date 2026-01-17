@@ -6,7 +6,6 @@ interface PortfolioFilter {
 interface Stat {
   number: string;
   label: string;
-  icon: string;
 }
 
 interface ProjectTechnology {
@@ -14,7 +13,7 @@ interface ProjectTechnology {
   description: string;
 }
 
-interface Project {
+export interface Project {
   id: string;
   title: string;
   shortDescription: string;
@@ -69,12 +68,13 @@ export const portfolioFilters: PortfolioFilter[] = [
   { key: "All", label: "All" },
   { key: "Web App", label: "Web App" },
   { key: "Dashboard", label: "Dashboard" },
+  { key: "E-commerce", label: "E-commerce" },
 ];
 
 export const stats: Stat[] = [
-  { number: "10+", label: "Projects Completed", icon: "🚀" },
-  { number: "1+", label: "Years Experience", icon: "⏰" },
-  { number: "100%", label: "Client Satisfaction", icon: "⭐" },
+  { number: "10+", label: "Projects Completed" },
+  { number: "1+", label: "Years Experience" },
+  { number: "100%", label: "Client Satisfaction" },
 ];
 
 export const projects: Project[] = [
@@ -631,6 +631,435 @@ export const projects: Project[] = [
     results: [
       "Successfully launched a professional website that captures and communicates the brand's core values of wellness and serenity.",
       "The site serves as an effective community hub with a blog and easy sign-ups for wellness events, improving user engagement.",
+    ],
+  },
+  {
+    id: "agrogubre",
+    title: "AgroGübrə",
+    shortDescription:
+      "Online marketplace for certified fertilizers, seeds, and crop protection products in Azerbaijan.",
+    image: "\"/images/gbaru.png\"",
+    category: "Web App",
+    tags: [
+          "Next.js",
+          "TypeScript",
+          "Tanstack Query",
+          "i18n",
+          "TailwindCSS",
+        ],
+    date: "2025",
+    status: "Completed",
+    liveUrl: "https://agrogubre.com",
+    githubUrl: "https://github.com/IbrahimAliyev20",
+
+    subtitle: "Your Trusted Online Fertilizer Marketplace in Azerbaijan",
+    longDescription:
+      "Agrogubre.com is a modern e-commerce platform designed specifically for Azerbaijani farmers and agricultural businesses, serving as a comprehensive online marketplace for high-quality agricultural inputs. The primary goal was to address the challenges faced by local farmers in accessing certified, eco-friendly fertilizers, seeds, and crop protection products efficiently and affordably.\n\nThe platform brings together a wide range of certified products — including mineral and organic fertilizers, high-germination seeds, plant protection agents, biostimulants, disinfectants, and pheromone traps — all focused on improving soil health, increasing crop yields, and supporting sustainable farming practices while preserving natural balance.\n\nUsers can easily browse categorized products, place orders online, and benefit from professional agronomic consulting services to select the right solutions for their specific crops and soil conditions. By emphasizing quality, ecology, and measurable results, Agrogubre.com helps farmers reduce costs, minimize resource waste, and achieve higher productivity in a transparent and convenient digital environment.\n\nUltimately, the platform acts as a reliable digital partner for the Azerbaijani agricultural community, connecting producers with premium agro supplies and expert knowledge to foster stronger, more sustainable farming practices across the country.",
+    gallery: [
+          "/images/ecosoft1.png",
+          "/images/ecosoft1.png",
+        ],
+    client: "AgroGübrə",
+    duration: "2 week",
+    team: "1 developers, 1 designer",
+
+    challenges: [
+          "Handling a large and diverse product catalog (fertilizers, seeds, plant protection products, biostimulants, traps) with accurate categorization, detailed specs, compatibility info, and regulatory compliance for certified agrochemicals in Azerbaijan.",
+          "Ensuring reliable delivery and logistics to remote rural areas across the country, where infrastructure is limited and many farmers are in hard-to-reach regions.",
+          "Building trust with traditional farmers who prefer in-person purchases, dealing with low digital literacy, cash-preferred payments, and skepticism toward online agro-product quality.",
+          "Implementing secure and user-friendly product selection/advice system (e.g., soil/crop-specific recommendations) while integrating professional agronomic consulting features.",
+          "Managing seasonal demand spikes, inventory accuracy for perishable/expiry-sensitive items (like certain stimulants or seeds), and real-time stock synchronization with suppliers.",
+        ],
+
+    solutions: [
+          "Built a scalable, categorized product catalog with advanced filters and detailed specs to simplify browsing of diverse certified agro products.",
+          "Created an accessible, intuitive UI/UX tailored for Azerbaijani farmers, with multilingual support and easy consulting request integration.",
+          "Added trust-building features like certification badges, agronomic guides, and secure forms to overcome skepticism toward online purchases.",
+          "Optimized the platform for seasonal usage and rural delivery needs through efficient inventory and order management.",
+        ],
+
+        technologies: [
+          {
+            name: "Next.js",
+            description: "React framework used for building a fast, SEO-friendly e-commerce platform with server-side rendering and API routes for product and order management."
+          },
+          {
+            name: "TypeScript",
+            description: "Ensures type safety across the entire codebase, reducing bugs in complex features like product filtering, forms, and order processing."
+          },
+          {
+            name: "Tailwind CSS",
+            description: "Utility-first CSS framework for creating a clean, responsive, and consistent design that works well on both desktop and mobile devices used by farmers."
+          },
+          {
+            name: "React Hook Form + Zod",
+            description: "Powerful combination for building and validating complex forms (product search, order checkout, consulting requests) with end-to-end type safety."
+          },
+          {
+            name: "TanStack Query",
+            description: "Manages server-state, caching, and background updates for product listings, filters, stock availability, and order status – essential for a smooth shopping experience."
+          },
+          {
+            name: "Shadcn/ui",
+            description: "Collection of reusable, accessible UI components built on Radix UI and Tailwind, used to create a modern and user-friendly interface for all pages."
+          },
+          {
+            name: "Next-Intl",
+            description: "Handles internationalization, providing full support for Azerbaijani language across the platform to make it accessible for local farmers."
+          },
+          {
+            name: "Axios",
+            description: "Reliable HTTP client for making API calls to fetch products, submit orders, and handle consulting requests securely and efficiently."
+          },
+          {
+            name: "Lucide React",
+            description: "Modern icon library integrated for clear, consistent icons throughout the interface (cart, filters, product categories, etc.)."
+          }
+        ],
+
+        results: [
+          "Successfully delivered a centralized digital marketplace connecting farmers with premium agro products, resulting in improved access to quality inputs for hundreds of users across Azerbaijan.",
+          "Enabled measurable improvements in farming efficiency through expert consulting and eco-conscious solutions, aligning with national goals for higher yields and sustainable agriculture.",
+          "Built a trusted online presence that reduces reliance on traditional supply chains, minimizing costs and environmental impact for the agricultural community."
+        ],
+  },
+  {
+    id: "casio",
+    title: "Casio Azerbaijan",
+    shortDescription:
+      "A Next.js-powered demo e-commerce site showcasing Casio watches in Azerbaijani language.",
+    image: "\"/images/gbaru.png\"",
+    category: "E-commerce",
+    tags: [
+      "Online Store",
+      "Casio Brand",
+      "Luxury Watches",
+      "Azerbaijan Market",
+      "UI/UX Design",
+      "Discount System",
+      "Local Language"
+    ],
+    date: "2026",
+    status: "In Progress",
+    liveUrl: "https://casio-aze.vercel.app/",
+    githubUrl: "https://github.com/IbrahimAliyev20",
+
+    subtitle: "Official Casio Online Store for Stylish Watches and Tools in Azerbaijan",
+    longDescription:
+      "Casio  is a modern, Azerbaijani-language online showcase and e-commerce-style platform built to bring the iconic Casio brand directly to users in Azerbaijan. The main objective was to create an accessible digital presence for Casio's high-performance watches, emphasizing style, durability, and innovation while tailoring the experience to local preferences.\n\nThe site features a clean, responsive design with sections for 'Seçilmiş Məhsullar' (Featured Products) and 'Endirimli Məhsullar' (Discounted Products), highlighting popular models like the BA-110 series (including variants such as BA-110YK-2ADR, BA-110YK-3ADR, and BA-110-1ASDR). It incorporates attractive discount displays (up to 97% off in demo mode), original vs. sale pricing, and intuitive 'Səbətə at' (Add to Cart) functionality to simulate a real shopping flow.\n\nPowered by the memorable tagline 'Sənin Üslubun, Sənin Zamanın' ('Your Style, Your Time'), the platform communicates Casio's core values of reliability, performance, and personal expression. It provides Azerbaijani users with a seamless browsing experience, making premium timepieces more approachable and relevant in the local market.\n\nUltimately, this project serves as a polished demonstration of building a localized brand experience: combining strong visual identity, user-centric design, and e-commerce best practices to connect a global brand like Casio with its Azerbaijani audience.",
+    gallery: [
+          "/images/gbaru-1.png",
+        ],
+    client: "Casio Azerbaijan",
+    duration: "1 month",
+    team: "1 developer, 1 designer",
+
+    challenges: [
+      "Full Azerbaijani localization of a global brand's product showcase while preserving Casio's premium and stylish identity.",
+      "Building a visually appealing, responsive demo e-commerce interface with dynamic discounts and product highlighting.",
+      "Simulating realistic shopping features (pricing, cart, stock) in a frontend-only environment without real backend integration.",
+      "Optimizing image-heavy pages for fast performance and smooth user experience on various devices."
+    ],
+
+    solutions: [
+      "Achieved complete Azerbaijani language support and cultural adaptation using Next-Intl for a seamless local user experience.",
+      "Built a highly responsive, visually appealing product showcase with Tailwind CSS and Shadcn/ui, optimized for both desktop and mobile.",
+      "Simulated realistic e-commerce functionality (dynamic discounts, pricing, cart) purely on the frontend to create an engaging demo without backend dependency.",
+      "Ensured fast performance and premium brand feel through image optimization, clean design, and careful UI balance."
+    ],
+    technologies: [
+      {
+        name: "Next.js",
+        description: "React framework used for building a fast, SEO-optimized product showcase with server-side rendering and static generation for better performance."
+      },
+      {
+        name: "TypeScript",
+        description: "Provides type safety throughout the application, ensuring reliable handling of product data, variants, pricing, and UI states."
+      },
+      {
+        name: "Tailwind CSS",
+        description: "Utility-first CSS framework that enabled rapid development of a clean, responsive, and brand-consistent design with custom color schemes."
+      },
+      {
+        name: "Shadcn/ui",
+        description: "Collection of reusable, accessible components (buttons, cards, badges) built on Radix UI and Tailwind, used for modern and consistent UI elements."
+      },
+      {
+        name: "Next-Intl",
+        description: "Powerful internationalization library that handled full Azerbaijani language support, including translations for all UI strings and product information."
+      },
+      {
+        name: "React Hook Form",
+        description: "Used for building and managing interactive forms (e.g., simulated checkout or contact), with easy validation and user-friendly experience."
+      },
+      {
+        name: "Zustand",
+        description: "Lightweight state management solution for handling cart simulation, selected products, and dynamic UI states without heavy boilerplate."
+      },
+      {
+        name: "Next.js Image",
+        description: "Optimized image handling with automatic resizing, lazy loading, and WebP format support for high-quality product photos with minimal load times."
+      },
+      {
+        name: "Vercel",
+        description: "Deployment platform that ensured fast global CDN delivery, automatic previews, and easy CI/CD for the Azerbaijani-focused showcase."
+      }
+    ],
+
+    results: [
+      "Delivered a polished Azerbaijani Casio product showcase with full language support, dynamic discount displays, and responsive design optimized for local users.",
+      "Successfully simulated an engaging shopping experience that aligns with Casio's brand identity of style, durability, and innovation in the Azerbaijan market.",
+    ],
+  },
+
+  {
+    id: "designed-shalala",
+    title: "Designed Shalala",
+    shortDescription:
+      "Elegant e-commerce experience for premium handmade gift compositions and bouquets, tailored for Azerbaijani users with custom options.",
+    image: "/images/gbaru.png",
+    category: "E-commerce",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn/ui",
+      "Multilingual",
+      "E-commerce",
+      "Responsive Design",
+      "Custom Forms"
+    ],
+    date: "2025",
+    status: "Completed",
+    liveUrl: "https://shalala-ten.vercel.app",
+    githubUrl: "https://github.com/IbrahimAliyev20",
+
+    subtitle: "A Digital Showcase for Artisanal Gifts – Where Every Detail Tells a Story",
+    longDescription:
+      "Designed Shalala  is a beautifully crafted, Azerbaijani-language digital platform showcasing 'Designed Shalala - Zərif Toxunuşlar', a handmade gift business specializing in elegant compositions, trays (xonça), and flower bouquets. The primary goal was to create an inviting online presence that captures the essence of artisanal craftsmanship, where every product is made with love to make special moments unforgettable.\n\nBuilt around the core philosophy 'Hər Detalda Bir Hekayə' (A Story in Every Detail), the site emphasizes that the most meaningful gifts come from careful, handmade creation. It features dedicated sections for products, a comprehensive FAQ addressing common questions (order process, handmade nature, custom designs, advance booking), and a prominent invitation for personalization: 'Xəyalınızdakı Dizaynı Birlikdə Yaradaq' (Let's Create Your Dream Design Together), allowing users to share ideas for unique trays, bouquets, or gift compositions.\n\nThe platform includes quality highlights ('Keyfiyyətimiz Rəqəmlərdə' – Our Quality in Numbers), responsive design optimized for Azerbaijani users, and intuitive navigation to explore categories like hədiyyə kompozisiyaları, xonça, and gül buketləri. It serves as a complete digital hub that bridges traditional handmade artistry with modern online accessibility, helping artisans present their delicate work to customers seeking emotional and personalized gifts.\n\nUltimately, this project demonstrates the development of a heartfelt, localized e-commerce showcase: combining emotional storytelling, cultural relevance, user-friendly features, and strong visual identity to elevate a small business's presence in the Azerbaijani market.",
+    gallery: [
+          "/images/gbaru-1.png",
+          "/images/ecosoft1.png",
+        ],
+    client: "Shalal Designed",
+    duration: "2 week",
+    team: "1 developer",
+
+    challenges: [
+      "Showcasing visually rich handmade products (xonça, kompozisiyalar, buketlər) with optimal performance and responsive gallery design.",
+      "Supporting custom/personalized orders through intuitive contact and idea-sharing flows in Azerbaijani.",
+      "Maintaining a premium, emotional brand feel ('Zərif Toxunuşlar' və 'Hər Detalda Bir Hekayə') in a localized, user-friendly interface.",
+      "Integrating FAQ, quality stats, and product sections effectively despite potential static/demo constraints."
+    ],
+
+    solutions: [
+      "Optimized image-heavy artisanal product showcase with Next.js Image for fast loading and responsive galleries of xonça, kompozisiyalar, and buketlər.",
+      "Created seamless custom order invitation ('Xəyalınızdakı Dizaynı Birlikdə Yaradaq') using accessible forms and clear CTAs to encourage personalized requests.",
+      "Preserved emotional, premium brand feel ('Hər Detalda Bir Hekayə') with Tailwind CSS, elegant design patterns, and full Azerbaijani localization via Next-Intl.",
+      "Structured static content (FAQ, quality stats) modularly for a polished look and easy future expansion to dynamic features."
+    ],
+
+    technologies: [
+      {
+        name: "Next.js",
+        description: "Fast, SEO-optimized framework for the entire platform."
+      },
+      {
+        name: "TypeScript",
+        description: "Type-safe codebase for reliable development."
+      },
+      {
+        name: "Tailwind CSS + Shadcn/ui",
+        description: "Elegant, responsive, and brand-consistent UI."
+      },
+      {
+        name: "Next-Intl",
+        description: "Full Azerbaijani language support."
+      },
+      {
+        name: "React Hook Form & Zod",
+        description: "Robust custom order and contact forms."
+      },
+      {
+        name: "Next.js Image",
+        description: "Optimized handling of high-quality product images."
+      }
+    ],
+
+    results: [
+      "Successfully launched a heartfelt, Azerbaijani-language digital showcase for 'Zərif Toxunuşlar', effectively presenting artisanal handmade gift compositions, trays (xonça), and bouquets with a strong emphasis on emotional storytelling and premium craftsmanship.",
+      "Delivered an inviting and user-centric platform that seamlessly integrates custom design requests ('Xəyalınızdakı Dizaynı Birlikdə Yaradaq'), comprehensive FAQ, and quality highlights, making personalized gifting accessible and meaningful for Azerbaijani customers.",
+      "Demonstrated expertise in creating a localized, visually appealing e-commerce-style experience that preserves the delicate brand identity ('Hər Detalda Bir Hekayə') while optimizing performance for image-rich content, helping elevate a small artisanal business's online presence.",
+    ],
+  },
+  {
+    id: "shoplink",
+    title: "Shoplink",
+    shortDescription:
+      "Multi-vendor e-commerce platform enabling Azerbaijani sellers to create and manage their own online stores with integrated dashboards.",
+    image: "Blanditiis dolorem v",
+    category: "Dashboard",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Multi-Vendor E-Commerce",
+      "Admin Panel",
+      "Seller Dashboard",
+      "Full-Stack Development",
+      "Marketplace Platform",
+      "Azerbaijani Market"
+    ],
+    date: "2025",
+    status: "Completed",
+    liveUrl: "https://shoplink.az",
+    githubUrl: "https://github.com/IbrahimAliyev20",
+
+    subtitle: "Multi-Vendor E-Commerce Platform: Empowering Azerbaijani Sellers to Build & Manage Their Own Online Stores",
+    longDescription:
+      "Shoplink is a comprehensive multi-vendor e-commerce platform developed to empower Azerbaijani entrepreneurs, small businesses, and social media sellers to establish and manage their own professional online stores without technical expertise. The core objective was to create an accessible, all-in-one ecosystem that simplifies the transition from offline or social selling to full-fledged digital commerce in the local market.\n\nThe platform allows sellers to create a personalized online shop in just one click, complete with custom branding, product listings, inventory and stock management, order tracking, and sales optimization tools. Vendors receive their own subdomain (e.g., mystore.shoplink.az), enabling independent yet interconnected operations within the marketplace. Key features include seamless integration with popular local channels like Instagram for product syncing, WhatsApp for direct customer communication, and cash-on-delivery or WhatsApp-based payments – perfectly tailored to Azerbaijani consumer preferences.\n\nBuilt with a unified admin and vendor dashboard, the system provides robust controls for both platform owners (global moderation, analytics) and individual sellers (product upload, stock monitoring, performance insights). It emphasizes reliability with 24/7 technical support, secure management, and a 1-week free trial period to encourage adoption.\n\nUltimately, Shoplink.az serves as a powerful digital infrastructure that removes barriers to online selling in Azerbaijan, helping users turn ideas into sales ('İDEYANI GƏTİR, BİZ SATIŞA ÇEVİRƏK!') while demonstrating advanced multi-tenant architecture, user-centric design, and localization for a growing e-commerce landscape.",
+    gallery: [
+          "/images/gbaru-1.png",
+          "/images/gbaru-2.png",
+        ],
+    client: "Markup",
+    duration: "2 months",
+    team: " 2developers, 1 designer",
+
+    challenges: [
+      "Implementing a robust multi-tenant architecture where hundreds of independent sellers can create and manage their own stores (with custom subdomains, branding, and isolated data) while maintaining global admin controls, security isolation, and performance under varying loads.",
+      "Handling complex seller workflows including product upload, inventory/stock synchronization, real-time order management, and analytics dashboards for both individual vendors and platform admins, all in a unified yet role-based system.",
+      "Integrating local Azerbaijani preferences such as WhatsApp-based communication/orders, cash-on-delivery payments, and Instagram product syncing, while dealing with limited reliable digital payment infrastructure and user trust issues in e-commerce.",
+      "Ensuring high security, data privacy, and compliance (e.g., preventing cross-vendor data leaks, fraud in vendor onboarding, IP protection) in a multi-vendor environment with potentially untrusted sellers, especially in a market with weak IPR enforcement.",
+      "Optimizing for scalability and performance: managing seasonal spikes, large product catalogs from multiple vendors, fast loading for mobile users (common in Azerbaijan), and seamless experience despite varying internet quality in regions.",
+      "Overcoming low digital adoption among small/local sellers by creating an extremely simple onboarding ('one-click store creation') and user-friendly interface in Azerbaijani, while providing 24/7 support simulation in a complex full-stack system."
+    ],
+    solutions: [
+      "Developed a warm, emotionally resonant UI/UX using Tailwind CSS and Shadcn/ui components, with soft color palettes, elegant typography, and high-quality product photography to reflect the handmade, artisanal nature of each gift composition and bouquet.",
+      "Implemented a fully Azerbaijani-localized experience with Next-Intl, including natural translations for all UI elements, product descriptions, FAQ section, and custom order forms to make the platform feel native and welcoming for local users.",
+      "Created an intuitive custom order flow allowing users to describe their dream design ('Xəyalınızdakı Dizaynı Birlikdə Yaradaq'), with text area inputs, file upload for reference images, and seamless form validation using React Hook Form + Zod.",
+      "Structured a clean product showcase with categorized sections (hədiyyə kompozisiyaları, xonça, gül buketləri), responsive grid layouts, and hover effects to highlight details, making it easy for customers to explore and get inspired.",
+      "Added trust-building features such as a detailed FAQ page addressing handmade production time, advance booking, quality guarantees, and a prominent contact/consultation section to reduce customer hesitation and support the personal, story-driven sales process."
+    ],
+
+    technologies: [
+      {
+        name: "Next.js",
+        description: "React framework for building a fast, SEO-optimized showcase with server-side rendering and static generation for product and about pages.",
+      },
+      {
+        name: "TypeScript",
+        description: "Type-safe codebase for reliable handling of custom order data, forms, and multilingual content.",
+      },
+      {
+        name: "Tailwind CSS",
+        description: "Utility-first CSS for creating a soft, elegant, and responsive design that matches the delicate handmade aesthetic.",
+      },
+      {
+        name: "Shadcn/ui",
+        description: "Reusable accessible components for cards, buttons, accordions (FAQ), and forms, ensuring consistent modern UI.",
+      },
+      {
+        name: "Next-Intl",
+        description: "Complete support for Azerbaijani language across all sections, slogans, and user-facing text.",
+      },
+      {
+        name: "React Hook Form + Zod",
+        description: "Powerful form management and validation for custom design requests, contact forms, and potential file uploads.",
+      },
+      {
+        name: "Framer Motion",
+        description: "Subtle animations and transitions to enhance the emotional, story-driven feel of the site (hover effects, section reveals).",
+      },
+      {
+        name: "Next.js Image",
+        description: "Optimized handling of high-quality product photos with lazy loading and automatic format conversion.",
+      },
+      {
+        name: "Vercel",
+        description: "Deployment platform providing fast global delivery, automatic previews, and easy hosting on shalala-ten.vercel.app subdomain.",
+      }
+    ],
+
+    results: [
+      "Successfully launched a visually captivating and fully Azerbaijani-localized digital showcase for 'Zərif Toxunuşlar', transforming a handmade gift business into an inviting online presence that emphasizes emotional storytelling and artisanal craftsmanship.",
+      "Delivered an elegant, user-centric platform with seamless custom order functionality, detailed FAQ, quality highlights, and responsive design, making it easy for customers to explore, get inspired, and request personalized gift compositions, trays, and bouquets.",
+      "Demonstrated strong ability to blend emotional branding ('Hər Detalda Bir Hekayə') with modern web development practices, creating a heartfelt digital hub that supports local artisans and enhances accessibility for Azerbaijani users seeking meaningful, handmade gifts."
+    ],
+  },
+
+  {
+    id: "glass-house",
+    title: "Glass House",
+    shortDescription:
+      "Corporate website for Glass House MMC, Azerbaijan's leading glass processing manufacturer since 2000.",
+    image: "/images/gbaru.png",
+    category: "Web App",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn/ui",
+      "Multilingual",
+      "Corporate",
+      "Product Catalog",
+      "SEO Optimized"
+    ],
+    date: "2025",
+    status: "Completed",
+    liveUrl: "https://glasshouse.az",
+    githubUrl: "https://github.com/IbrahimAliyev20",
+
+    subtitle: "Corporate Web Platform for Azerbaijan's Premier Glass Processing & Manufacturing Company",
+    longDescription:
+      "Glass House is a modern corporate website developed for Glass House MMC, Azerbaijan's leading glass processing and manufacturing company established in 2000. The platform serves as a comprehensive digital showcase for the company's expertise in high-performance glass solutions, targeting the construction, architecture, and security sectors across Azerbaijan.\n\nThe site provides detailed information on a wide range of specialized products, including tempered glass (with enhanced impact, bending, and thermal resistance), laminated glass (with various PVB interlayers for acoustic and solar control), bulletproof glass (certified for specific ballistic threats), multifunctional insulated glass units (featuring LOW-E coatings and argon filling for energy efficiency), and painted/enamel glass for functional and decorative applications. It highlights the use of advanced international technologies and partnerships with global leaders such as Guardian Glass (USA), Pilkington (UK), AGC (Japan), Saint-Gobain (France), Şişecam (Turkey), and local Azerfloat.\n\nKey sections include an overview of the company's history and advantages (modern equipment, professional team, precision processing), a full product catalog with technical specifications, an impressive portfolio of realized projects (e.g., Jumeirah Bilgah Beach Hotel, Central Botanical Garden, various ASAN centers, Olympic complexes, and business plazas), partner logos, and a contact form for inquiries. The platform supports bilingual presentation (Azerbaijani and English) to reach both local and international audiences.\n\nUltimately, this project demonstrates the creation of a structured, informative corporate site that effectively communicates technical excellence, industry leadership, and real-world applications, helping Glass House MMC strengthen its position as the address of quality and trust in modern architecture and construction in Azerbaijan.",
+    gallery: [
+          "/images/gbaru-1.png",
+        ],
+    client: "Glass House",
+    duration: "1 months",
+    team: "1 developers, 1 designer",
+
+    challenges: [
+      "Presenting highly technical product specifications (tempered, laminated, bulletproof, multifunctional glass with PVB interlayers, LOW-E coatings, argon filling, ballistic certifications) in a clear, accessible, yet professional manner for both architects and end-clients.",
+      "Organizing and displaying an extensive portfolio of realized projects (hotels, botanical gardens, ASAN centers, business plazas, Olympic complexes) with high-quality visuals, while maintaining fast loading times and responsive design across devices.",
+      "Balancing bilingual content (Azerbaijani and English) with consistent layout, accurate translations of technical terms, and cultural appropriateness for international partners and local construction sector.",
+      "Ensuring visual hierarchy and trust-building elements (partner logos from Guardian, Pilkington, AGC, Saint-Gobain, Şişecam; quality highlights since 2000) without overwhelming the clean corporate aesthetic.",
+      "Handling large image assets of glass samples, production process, and completed installations while optimizing performance, SEO, and accessibility on a content-heavy corporate site."
+    ],
+
+    solutions: [
+      "Organized technical product information with clear visuals, tables, and simplified descriptions to make specialized glass solutions understandable for professional audiences.",
+      "Built a high-performance project portfolio section with responsive galleries and optimized images to effectively display prestigious architectural realizations.",
+      "Integrated full bilingual support (Azerbaijani & English) using Next-Intl, ensuring accurate technical terminology and consistent design across languages.",
+      "Created a trustworthy corporate layout with strategic partner integrations, quality highlights, and fast-loading media to strengthen brand credibility."
+    ],
+
+    technologies: [
+      {
+        name: "Next.js + TypeScript",
+        description: "Modern, performant, and type-safe foundation for corporate web application.",
+      },
+      {
+        name: "Tailwind CSS + Shadcn/ui",
+        description: "Clean, responsive, and professional UI design system.",
+      },
+      {
+        name: "Next-Intl",
+        description: "Full bilingual (Azerbaijani/English) support.",
+      },
+      {
+        name: "Next.js Image",
+        description: "Optimized handling of high-resolution product and project images.",
+      },
+      {
+        name: "Vercel",
+        description: "Fast deployment and hosting.",
+      }
+    ],
+    results: [
+      "Built and deployed a complete localized online showcase for premium handmade gift compositions, trays, and bouquets in Azerbaijan.",
+      "Empowered the brand with a modern digital presence that highlights custom designs, emotional value, and artisan quality through intuitive UI and strong visual storytelling.",
     ],
   },
 ];

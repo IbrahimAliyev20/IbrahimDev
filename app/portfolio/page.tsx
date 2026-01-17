@@ -36,11 +36,11 @@ export default function PortfolioPage() {
         <section className="py-8 px-6">
           <div className="container mx-auto">
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {portfolioFilters.map((filter, index) => (
+              {portfolioFilters.map((filter) => (
                 <button
                   key={filter.key}
                   onClick={() => setActiveFilter(filter.key)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeFilter === filter.key ? "bg-white text-blue-600 shadow-lg" : "bg-white/10 backdrop-blur-sm text-slate-200 border border-white/20 hover:bg-white/20 hover:border-white/30"}`}
+                  className={`px-6 py-3 rounded-full font-bold font-[roboto] transition-all  duration-300 ${activeFilter === filter.key ? "bg-white/90 text-blue-600 " : "bg-white/10 backdrop-blur-sm text-slate-200 border border-white/20 hover:bg-white/20 hover:border-white/30"}`}
                 >
                   <Filter className="h-4 w-4 inline mr-2" />
                   {filter.label}

@@ -46,7 +46,7 @@ export default function Header() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="group relative">
-            <div className="absolute inset-0 bg-cyan-400/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-1"></div>
+            <div className="absolute inset-0 bg-cyan-400/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 "></div>
             <Image
               src="/images/logo.png"
               alt="Logo"
@@ -60,13 +60,13 @@ export default function Header() {
 
           <div className="flex items-center gap-4">
             <div className="hidden sm:block">
-              <Button
+              <button
                 onClick={handleDownloadCV}
-                className="relative bg-transparent border border-cyan-400/50 text-cyan-300 hover:text-white hover:bg-cyan-400/10 hover:border-cyan-400 px-5 py-2 text-sm font-medium transition-all duration-300 rounded-lg group overflow-hidden"
+                className="h-11 rounded-md flex items-center justify-center relative bg-transparent border-2 border-cyan-400/80 text-white hover:bg-gradient-to-r hover:from-cyan-500/80 hover:to-blue-500/70 hover:border-cyan-400 px-5 py-5 text-lg font-semibold group transition-all duration-500  backdrop-blur-sm hover:scale-105 active:scale-95 overflow-hidden"
               >
                 <span className="relative z-10">Download CV</span>
                 <span className="absolute inset-0 bg-cyan-400/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
-              </Button>
+              </button>
             </div>
             <button
               className="md:hidden p-2.5 rounded-lg text-cyan-300 hover:text-white hover:bg-cyan-400/10 transition-all duration-200"
