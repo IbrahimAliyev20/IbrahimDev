@@ -97,7 +97,7 @@ export const projects: Project[] = [
     gallery: ["/images/platinium17-1.png", "/images/platinium17-2.png"],
     client: "Platinium-17",
     duration: "1 month",
-    team: "1 frontend developer, 1 backend developer, 1 designer",
+    team: "2 frontend developer, 1 backend developer, 1 designer",
 
     challenges: [
       "Integrating a complex, multi-level product categorization API from the backend.",
@@ -179,7 +179,7 @@ export const projects: Project[] = [
     gallery: ["/images/gbaru-1.png", "/images/gbaru-2.png"],
     client: "Gbaru",
     duration: "2 Months",
-    team: "3 developers, 1 designer",
+    team: "2 frontend developers, 1 backend developer, 1 designer",
 
     challenges: [
       "Managing complex server state across a multi-functional platform with ads, tenders, and user data.",
@@ -276,7 +276,7 @@ export const projects: Project[] = [
     gallery: ["/images/fondera1.png", "/images/fondera2.png"],
     client: "Markup",
     duration: "In Progress",
-    team: "1 developer, 1 designer",
+    team: "1 frontend developers,1 backend developer, 1 designer",
 
     challenges: [
       "Presenting complex financial and portfolio data in a clear and interactive way using charts.",
@@ -373,7 +373,7 @@ export const projects: Project[] = [
     gallery: ["/images/consaltex1.png", "/images/consaltex2.png"],
     client: "Consaltex",
     duration: "1 week",
-    team: "1 developer, 1 designer",
+    team: "1 frontend developers,1 backend developer, 1 designer",
 
     challenges: [
       "Conveying the authority and credibility required for a specialized pharmaceutical consulting firm.",
@@ -440,7 +440,7 @@ export const projects: Project[] = [
     gallery: ["/images/gcg1.png", "/images/gcg2.png"],
     client: "Green Caspian",
     duration: "3 days",
-    team: "1 developer, 1 designer",
+    team: "1 frontend developers,1 backend developer, 1 designer",
 
     challenges: [
       "Delivering a complete and professional website within a very tight 3-day deadline.",
@@ -499,7 +499,7 @@ export const projects: Project[] = [
     gallery: ["/images/ecosoft1.png", "/images/ecosoft2.png"],
     client: "Ecosoft",
     duration: "1 week",
-    team: "1 developer, 1 designer",
+    team: "1 frontend developers,1 backend developer, 1 designer",
 
     challenges: [
       "Designing a user journey that effectively converts product interest into sales leads via contact forms and WhatsApp.",
@@ -638,7 +638,7 @@ export const projects: Project[] = [
     title: "AgroGübrə",
     shortDescription:
       "Online marketplace for certified fertilizers, seeds, and crop protection products in Azerbaijan.",
-    image: "\"/images/gbaru.png\"",
+    image: "/images/agrogubre.png",
     category: "Web App",
     tags: [
           "Next.js",
@@ -656,12 +656,12 @@ export const projects: Project[] = [
     longDescription:
       "Agrogubre.com is a modern e-commerce platform designed specifically for Azerbaijani farmers and agricultural businesses, serving as a comprehensive online marketplace for high-quality agricultural inputs. The primary goal was to address the challenges faced by local farmers in accessing certified, eco-friendly fertilizers, seeds, and crop protection products efficiently and affordably.\n\nThe platform brings together a wide range of certified products — including mineral and organic fertilizers, high-germination seeds, plant protection agents, biostimulants, disinfectants, and pheromone traps — all focused on improving soil health, increasing crop yields, and supporting sustainable farming practices while preserving natural balance.\n\nUsers can easily browse categorized products, place orders online, and benefit from professional agronomic consulting services to select the right solutions for their specific crops and soil conditions. By emphasizing quality, ecology, and measurable results, Agrogubre.com helps farmers reduce costs, minimize resource waste, and achieve higher productivity in a transparent and convenient digital environment.\n\nUltimately, the platform acts as a reliable digital partner for the Azerbaijani agricultural community, connecting producers with premium agro supplies and expert knowledge to foster stronger, more sustainable farming practices across the country.",
     gallery: [
-          "/images/ecosoft1.png",
-          "/images/ecosoft1.png",
+          "/images/agrogubre1.png",
+          "/images/agrogubre2.png",
         ],
     client: "AgroGübrə",
     duration: "2 week",
-    team: "1 developers, 1 designer",
+    team: "1 frontend developers,1 backend developer, 1 designer",
 
     challenges: [
           "Handling a large and diverse product catalog (fertilizers, seeds, plant protection products, biostimulants, traps) with accurate categorization, detailed specs, compatibility info, and regulatory compliance for certified agrochemicals in Azerbaijan.",
@@ -728,7 +728,7 @@ export const projects: Project[] = [
     title: "Casio Azerbaijan",
     shortDescription:
       "A Next.js-powered demo e-commerce site showcasing Casio watches in Azerbaijani language.",
-    image: "\"/images/gbaru.png\"",
+    image: "/images/casio.png",
     category: "E-commerce",
     tags: [
       "Online Store",
@@ -748,11 +748,12 @@ export const projects: Project[] = [
     longDescription:
       "Casio  is a modern, Azerbaijani-language online showcase and e-commerce-style platform built to bring the iconic Casio brand directly to users in Azerbaijan. The main objective was to create an accessible digital presence for Casio's high-performance watches, emphasizing style, durability, and innovation while tailoring the experience to local preferences.\n\nThe site features a clean, responsive design with sections for 'Seçilmiş Məhsullar' (Featured Products) and 'Endirimli Məhsullar' (Discounted Products), highlighting popular models like the BA-110 series (including variants such as BA-110YK-2ADR, BA-110YK-3ADR, and BA-110-1ASDR). It incorporates attractive discount displays (up to 97% off in demo mode), original vs. sale pricing, and intuitive 'Səbətə at' (Add to Cart) functionality to simulate a real shopping flow.\n\nPowered by the memorable tagline 'Sənin Üslubun, Sənin Zamanın' ('Your Style, Your Time'), the platform communicates Casio's core values of reliability, performance, and personal expression. It provides Azerbaijani users with a seamless browsing experience, making premium timepieces more approachable and relevant in the local market.\n\nUltimately, this project serves as a polished demonstration of building a localized brand experience: combining strong visual identity, user-centric design, and e-commerce best practices to connect a global brand like Casio with its Azerbaijani audience.",
     gallery: [
-          "/images/gbaru-1.png",
+          "/images/casio1.png",
+          "/images/casio2.png",
         ],
     client: "Casio Azerbaijan",
     duration: "1 month",
-    team: "1 developer, 1 designer",
+    team: "1 frontend developers,1 backend developer, 1 designer",
 
     challenges: [
       "Full Azerbaijani localization of a global brand's product showcase while preserving Casio's premium and stylish identity.",
@@ -817,7 +818,7 @@ export const projects: Project[] = [
     title: "Designed Shalala",
     shortDescription:
       "Elegant e-commerce experience for premium handmade gift compositions and bouquets, tailored for Azerbaijani users with custom options.",
-    image: "/images/gbaru.png",
+    image: "/images/shalala.png",
     category: "E-commerce",
     tags: [
       "Next.js",
@@ -838,12 +839,12 @@ export const projects: Project[] = [
     longDescription:
       "Designed Shalala  is a beautifully crafted, Azerbaijani-language digital platform showcasing 'Designed Shalala - Zərif Toxunuşlar', a handmade gift business specializing in elegant compositions, trays (xonça), and flower bouquets. The primary goal was to create an inviting online presence that captures the essence of artisanal craftsmanship, where every product is made with love to make special moments unforgettable.\n\nBuilt around the core philosophy 'Hər Detalda Bir Hekayə' (A Story in Every Detail), the site emphasizes that the most meaningful gifts come from careful, handmade creation. It features dedicated sections for products, a comprehensive FAQ addressing common questions (order process, handmade nature, custom designs, advance booking), and a prominent invitation for personalization: 'Xəyalınızdakı Dizaynı Birlikdə Yaradaq' (Let's Create Your Dream Design Together), allowing users to share ideas for unique trays, bouquets, or gift compositions.\n\nThe platform includes quality highlights ('Keyfiyyətimiz Rəqəmlərdə' – Our Quality in Numbers), responsive design optimized for Azerbaijani users, and intuitive navigation to explore categories like hədiyyə kompozisiyaları, xonça, and gül buketləri. It serves as a complete digital hub that bridges traditional handmade artistry with modern online accessibility, helping artisans present their delicate work to customers seeking emotional and personalized gifts.\n\nUltimately, this project demonstrates the development of a heartfelt, localized e-commerce showcase: combining emotional storytelling, cultural relevance, user-friendly features, and strong visual identity to elevate a small business's presence in the Azerbaijani market.",
     gallery: [
-          "/images/gbaru-1.png",
-          "/images/ecosoft1.png",
+          "/images/shalala1.png",
+          "/images/shalala2.png",
         ],
     client: "Shalal Designed",
     duration: "2 week",
-    team: "1 developer",
+    team: "1 frontend developers",
 
     challenges: [
       "Showcasing visually rich handmade products (xonça, kompozisiyalar, buketlər) with optimal performance and responsive gallery design.",
@@ -897,7 +898,7 @@ export const projects: Project[] = [
     title: "Shoplink",
     shortDescription:
       "Multi-vendor e-commerce platform enabling Azerbaijani sellers to create and manage their own online stores with integrated dashboards.",
-    image: "Blanditiis dolorem v",
+    image: "/images/shoplink.png",
     category: "Dashboard",
     tags: [
       "Next.js",
@@ -919,12 +920,12 @@ export const projects: Project[] = [
     longDescription:
       "Shoplink is a comprehensive multi-vendor e-commerce platform developed to empower Azerbaijani entrepreneurs, small businesses, and social media sellers to establish and manage their own professional online stores without technical expertise. The core objective was to create an accessible, all-in-one ecosystem that simplifies the transition from offline or social selling to full-fledged digital commerce in the local market.\n\nThe platform allows sellers to create a personalized online shop in just one click, complete with custom branding, product listings, inventory and stock management, order tracking, and sales optimization tools. Vendors receive their own subdomain (e.g., mystore.shoplink.az), enabling independent yet interconnected operations within the marketplace. Key features include seamless integration with popular local channels like Instagram for product syncing, WhatsApp for direct customer communication, and cash-on-delivery or WhatsApp-based payments – perfectly tailored to Azerbaijani consumer preferences.\n\nBuilt with a unified admin and vendor dashboard, the system provides robust controls for both platform owners (global moderation, analytics) and individual sellers (product upload, stock monitoring, performance insights). It emphasizes reliability with 24/7 technical support, secure management, and a 1-week free trial period to encourage adoption.\n\nUltimately, Shoplink.az serves as a powerful digital infrastructure that removes barriers to online selling in Azerbaijan, helping users turn ideas into sales ('İDEYANI GƏTİR, BİZ SATIŞA ÇEVİRƏK!') while demonstrating advanced multi-tenant architecture, user-centric design, and localization for a growing e-commerce landscape.",
     gallery: [
-          "/images/gbaru-1.png",
-          "/images/gbaru-2.png",
+          "/images/shoplink1.png",
+          "/images/shoplink2.png",
         ],
     client: "Markup",
     duration: "2 months",
-    team: " 2developers, 1 designer",
+    team: " 2 frontend developers, 1 backend developer, 1 designer",
 
     challenges: [
       "Implementing a robust multi-tenant architecture where hundreds of independent sellers can create and manage their own stores (with custom subdomains, branding, and isolated data) while maintaining global admin controls, security isolation, and performance under varying loads.",
@@ -993,7 +994,7 @@ export const projects: Project[] = [
     title: "Glass House",
     shortDescription:
       "Corporate website for Glass House MMC, Azerbaijan's leading glass processing manufacturer since 2000.",
-    image: "/images/gbaru.png",
+    image: "/images/glasshouse.png",
     category: "Web App",
     tags: [
       "Next.js",
@@ -1014,11 +1015,12 @@ export const projects: Project[] = [
     longDescription:
       "Glass House is a modern corporate website developed for Glass House MMC, Azerbaijan's leading glass processing and manufacturing company established in 2000. The platform serves as a comprehensive digital showcase for the company's expertise in high-performance glass solutions, targeting the construction, architecture, and security sectors across Azerbaijan.\n\nThe site provides detailed information on a wide range of specialized products, including tempered glass (with enhanced impact, bending, and thermal resistance), laminated glass (with various PVB interlayers for acoustic and solar control), bulletproof glass (certified for specific ballistic threats), multifunctional insulated glass units (featuring LOW-E coatings and argon filling for energy efficiency), and painted/enamel glass for functional and decorative applications. It highlights the use of advanced international technologies and partnerships with global leaders such as Guardian Glass (USA), Pilkington (UK), AGC (Japan), Saint-Gobain (France), Şişecam (Turkey), and local Azerfloat.\n\nKey sections include an overview of the company's history and advantages (modern equipment, professional team, precision processing), a full product catalog with technical specifications, an impressive portfolio of realized projects (e.g., Jumeirah Bilgah Beach Hotel, Central Botanical Garden, various ASAN centers, Olympic complexes, and business plazas), partner logos, and a contact form for inquiries. The platform supports bilingual presentation (Azerbaijani and English) to reach both local and international audiences.\n\nUltimately, this project demonstrates the creation of a structured, informative corporate site that effectively communicates technical excellence, industry leadership, and real-world applications, helping Glass House MMC strengthen its position as the address of quality and trust in modern architecture and construction in Azerbaijan.",
     gallery: [
-          "/images/gbaru-1.png",
+          "/images/glasshouse1.png",
+          "/images/glasshouse2.png",
         ],
     client: "Glass House",
     duration: "1 months",
-    team: "1 developers, 1 designer",
+    team: "2 frontend developers, 1 backend developer, 1 designer",
 
     challenges: [
       "Presenting highly technical product specifications (tempered, laminated, bulletproof, multifunctional glass with PVB interlayers, LOW-E coatings, argon filling, ballistic certifications) in a clear, accessible, yet professional manner for both architects and end-clients.",
@@ -1062,4 +1064,231 @@ export const projects: Project[] = [
       "Empowered the brand with a modern digital presence that highlights custom designs, emotional value, and artisan quality through intuitive UI and strong visual storytelling.",
     ],
   },
+
+  {
+    id: "seed-academy",
+    title: "Seed Academy",
+    shortDescription:
+      "A modern educational platform in Azerbaijan offering practical training in technology, design, and programming, empowering youth with in-demand skills and career support.",
+    image: "/images/seedacademy.png",
+    category: "Web App",
+    tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "GSAP / AOS Animations", "Education Platform"],
+    date: "2025",
+    status: "Completed",
+    liveUrl: "https://seededu.az",
+    githubUrl: "https://github.com/IbrahimAliyev20",
+  
+    subtitle: "Building the Future of Tech Talent – One Practical Step at a Time",
+  
+    longDescription:
+      "Seed Academy is a forward-thinking educational platform in Azerbaijan dedicated to equipping young people and career changers with high-demand skills in creative and technical fields. The main goal is to deliver practical, industry-relevant training in areas such as Graphic Design, Python Programming, iOS Development, Artificial Intelligence Fundamentals, Robotics, Arduino, and Web Programming.\n\nBuilt with classic web technologies (HTML, CSS, JavaScript), the site stands out with smooth scroll-triggered animations, interactive elements, and a clean, motivational design. It offers free trial lessons, scholarship programs (including special support for women in tech), personalized mentorship, hands-on labs, graduation projects, and a dedicated career center to help students transition into real jobs. The platform emphasizes accessibility, motivation, and real-world application to inspire the next generation of tech professionals.",
+  
+    gallery: [
+      "/images/seedacademy1.png",
+      "/images/seedacademy2.png",
+    ],
+  
+    client: "Seed Academy",
+    duration: "3 weeks",
+    team: "2 frontend developer,1 backend developer, 1 designer",
+  
+    challenges: [
+      "Creating an engaging, modern, and highly interactive experience without modern frameworks like React or Next.js",
+      "Presenting a wide variety of technical courses in a clear, visually appealing, and motivational way",
+      "Achieving smooth performance and fluid animations across desktop and mobile devices",
+      "Balancing a professional yet inspiring tone to build trust and excitement among young learners"
+    ],
+  
+    solutions: [
+      "Utilized vanilla JavaScript combined with animation libraries (likely AOS or GSAP) to deliver rich scroll-based and hover effects",
+      "Implemented a modular, responsive CSS structure with flexible grids to ensure perfect display on all devices",
+      "Designed attention-grabbing interactive elements, course cards, testimonials, and strong CTAs to increase user engagement",
+      "Integrated student success stories, mentor highlights, and clear value propositions to build credibility and motivation"
+    ],
+  
+    technologies: [
+      {
+        name: "HTML5",
+        description: "Semantic and accessible structure as the foundation of the site"
+      },
+      {
+        name: "CSS3",
+        description: "Modern responsive layouts, custom animations, and visual styling"
+      },
+      {
+        name: "JavaScript (Vanilla)",
+        description: "Interactive features, form handling, and dynamic behavior without frameworks"
+      },
+      {
+        name: "AOS / GSAP",
+        description: "Scroll-triggered animations and smooth transitions for enhanced user experience"
+      },
+      {
+        name: "Responsive Design",
+        description: "Fully mobile-friendly layout optimized for all screen sizes"
+      }
+    ],
+  
+    results: [
+      "Delivered a modern, premium-feeling education platform using only classic web technologies",
+      "Created a highly motivational and professional online presence that resonates with young people in Azerbaijan",
+      "Established an effective lead-generation system through trial lesson sign-ups and scholarship registrations",
+      "Achieved excellent mobile performance and user satisfaction with smooth animations and intuitive navigation"
+    ]
+  },
+  {
+    id: "markup-agency", 
+    title: "Markup Agency",
+    shortDescription:
+      "The official portfolio website of Markup Agency – a modern, animated showcase of our design & development services, built to attract startups and established businesses in Azerbaijan.",
+    image: "/images/markupagency.png", // add your hero / main screenshot here
+    category: "Web App",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/ui", "Framer Motion", "React Bits", "Animated UI", "Agency Portfolio"],
+    date: "2025",
+    status: "Completed",
+    liveUrl: "https://markup-agency-v2.vercel.app",
+    githubUrl: "https://github.com/IbrahimAliyev20",
+  
+    subtitle: "Where Creativity Meets Cutting-Edge Technology – Our Digital Home",
+  
+    longDescription:
+      "Markup Agency v2 is the redesigned and upgraded official website of our digital agency, serving as a powerful portfolio and lead-generation tool. The primary goal was to create a visually stunning, highly interactive, and conversion-focused online presence that reflects our expertise in UI/UX design, web development, branding, and technical solutions.\n\nBuilt entirely with Next.js 16+ and TypeScript, the site features buttery-smooth animations, elegant component design, and a modern minimalist aesthetic. It highlights our core services (UI/UX Design, Custom Web Development, Logo & Branding, Technical Support), showcases our unique approach (creativity, strategy, innovation, customer focus), and presents key metrics and results. The platform is optimized for performance, SEO, and multilingual readiness, making it an ideal digital business card for collaborating with early-stage startups and successful companies in Azerbaijan and beyond.",
+  
+    gallery: [
+      "/images/markupagency1.png",
+      "/images/markupagency2.png",
+    ],
+  
+    client: "Markup Agency",
+    duration: "1 month",
+    team: "2 frontend developers, 1 backend developer, 1 designer",
+  
+    challenges: [
+      "Creating a premium, high-end agency feel with advanced animations and interactions without sacrificing performance",
+      "Balancing beautiful visual storytelling with clear information architecture for services, results, and contact conversion",
+      "Implementing reusable, accessible, and customizable UI components while keeping the codebase clean and maintainable",
+      "Showcasing the agency's capabilities through the website itself (meta-portfolio approach)"
+    ],
+  
+    solutions: [
+      "Leveraged Framer Motion and React Bits for smooth scroll-triggered animations, page transitions, and micro-interactions",
+      "Built the entire UI with Shadcn/ui + Tailwind CSS for consistent, modern, and highly customizable components",
+      "Used Next.js App Router, TypeScript, and server components for optimal performance, SEO, and developer experience",
+      "Designed a motivational hero section, clear service cards, results counters, and strong CTAs to drive inquiries"
+    ],
+  
+    technologies: [
+      {
+        name: "Next.js 16+",
+        description: "App Router, Server Components, and static generation for blazing-fast performance and SEO"
+      },
+      {
+        name: "TypeScript",
+        description: "Full type safety across the codebase for scalable and error-free development"
+      },
+      {
+        name: "Tailwind CSS",
+        description: "Utility-first styling for rapid, responsive, and consistent design"
+      },
+      {
+        name: "Shadcn/ui",
+        description: "Beautiful, accessible, and customizable UI components built on Radix UI"
+      },
+      {
+        name: "Framer Motion",
+        description: "Powerful animation library for scroll effects, transitions, and interactive elements"
+      },
+      {
+        name: "React Bits",
+        description: "Additional high-quality animated UI components and utilities"
+      },
+      {
+        name: "Next.js Image",
+        description: "Optimized image loading with automatic format conversion and lazy loading"
+      }
+    ],
+  
+    results: [
+      "Created a stunning, animated portfolio site that positions Markup Agency as a premium, modern digital partner",
+      "Achieved excellent performance and user experience across devices with Next.js optimizations",
+      "Established a strong lead-generation funnel through clear services presentation and contact forms",
+      "Demonstrated our own capabilities by building a meta-portfolio that reflects the quality we deliver to clients"
+    ]
+  },
+
+
+  {
+    id: "birtoy",
+    title: "BirToy",
+    shortDescription:
+      "A comprehensive wedding services platform in Azerbaijan that brings together venues, bridal shops, photographers, videographers, music groups, and exclusive deals – simplifying wedding planning in one place.",
+    image: "/images/birtoy.png",
+    category: "Web App",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/ui", "Wedding Marketplace", "Azerbaijan Local", "In Progress"],
+    date: "2025-2026",
+    status: "In Progress",
+    liveUrl: "https://toy-xi.vercel.app",
+    githubUrl: "https://github.com/IbrahimAliyev20", 
+  
+    subtitle: "Your All-in-One Wedding Planning Hub – From Venue to Music, Everything in One Click",
+  
+    longDescription:
+      "Toy XI is an ambitious marketplace platform designed specifically for the Azerbaijani wedding industry, aiming to become the go-to destination for couples planning their special day. The core objective is to centralize fragmented wedding services – luxury venues (e.g., Alyans Şadlıq Sarayı), bridal gown stores (e.g., Lavin Wedding House), professional photo & video teams, live music groups, and ongoing campaigns/discounts – into a single, user-friendly digital ecosystem.\n\nBuilt with Next.js and TypeScript, the site offers intuitive navigation, category-based browsing, minimum price indicators (e.g., starting from 99 AZN for photo services), and quick access to detailed listings. It targets engaged couples, families, and event planners in Baku and across Azerbaijan, making wedding preparation more convenient, transparent, and budget-friendly. Features include user login, dedicated category pages, and promotional campaigns to drive engagement and bookings. The project is actively under development, with a focus on expanding listings, adding filters/search, and implementing vendor dashboards in future iterations.",
+  
+    gallery: [
+      "/images/birtoy1.png",
+      "/images/birtoy2.png",
+    ],
+    client: "BirToy",
+    duration: "In Progress",
+    team: "1 frontend developers, 1 backend developer, 1 designer",
+  
+    challenges: [
+      "Aggregating and organizing diverse, real-world wedding service providers with accurate pricing, availability, and visuals in a single platform",
+      "Creating an intuitive, emotionally appealing experience for users planning one of life's biggest events while keeping the site fast and mobile-friendly",
+      "Handling localized content (Azerbaijani language, Baku-centric venues) with potential for future multilingual expansion",
+      "Building scalable category pages and dynamic listings without a full backend yet (using static/mock data during development)"
+    ],
+  
+    solutions: [
+      "Structured the site with clear category sections (venues, bridal, photo/video, music) and prominent 'View All' CTAs for easy discovery",
+      "Leveraged Next.js for fast loading, SEO-friendly pages, and smooth navigation between service types",
+      "Used modern UI components for elegant cards, price badges, and campaign highlights to evoke trust and excitement",
+      "Implemented user authentication flow early to support future personalized features like favorites or bookings"
+    ],
+  
+    technologies: [
+      {
+        name: "Next.js",
+        description: "App Router and server-side rendering for high performance and SEO in a dynamic marketplace"
+      },
+      {
+        name: "TypeScript",
+        description: "Strong typing for reliable data handling across service listings and user features"
+      },
+      {
+        name: "Tailwind CSS",
+        description: "Rapid, responsive styling with custom themes suitable for wedding elegance"
+      },
+      {
+        name: "Shadcn/ui",
+        description: "Beautiful, accessible components for cards, buttons, and navigation"
+      },
+      {
+        name: "React Hook Form",
+        description: "Planned for future forms (e.g., contact vendors, login, filters)"
+      },
+      {
+        name: "Next.js Image",
+        description: "Optimized loading of high-quality venue, bridal, and service photos"
+      }
+    ],
+  
+    results: [
+      "Launched a live prototype that already showcases core wedding service categories and real Baku providers",
+      "Created an appealing, localized digital solution addressing a real pain point in Azerbaijani wedding planning",
+      "Established strong foundation for future growth: vendor onboarding, search/filter, and booking integration",
+      "Demonstrated ability to build emotionally resonant marketplaces with clean modern tech stack"
+    ]
+  }
 ];
